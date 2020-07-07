@@ -1,0 +1,39 @@
+####################################################################################################################################
+# YAML to capture outputs from the devices in the network
+# 
+# Steps to setup the capture file:
+# Step 1 :: Need to specify the Capture Name (multiple captures allowed).
+# Step 2 :: Under each Capture Name, need to specify the following:
+#           The devices: keyword which is: 
+#           - a list of Devices to capture the outputs. 
+#           - could be an IP address, hostname, specific keyword like AllE, allB and/or AllCP or a combination of all the above. 
+#           - (ALLE is all edges, AllB is Borders, AllCP are all control plane devices). The case is insensitive.
+#           The commands: ketword which is list of commands to be executed
+#
+# For Example:
+# cap1: <-- Define a Capture Name
+#   devices: 172.23.251.2,allE, Fusion-1         devices can be a combination of IP addresses and/or the keywords AllE, AllB or AllCP (case insensitive)
+#   commands: 				List of commands to be executed
+#      - show interface
+#      - show ver
+#
+####################################################################################################################################
+
+cap1:
+   devices: 172.23.251.2,172.23.250.2         # devices can be a combination of IP addresses and the keywords AllE, AllB or AllCP (case insensitive)
+   commands: 
+      - show interface                        # commands to be executed 
+      - show ver
+
+capALLE:
+   devices: ALLE
+   commands:                                         
+       - show ver 
+       - show running
+
+capALLB:
+   devices: AllB
+   commands:                                         
+       - show ver
+       - show running
+
