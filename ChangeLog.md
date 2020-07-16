@@ -1,4 +1,11 @@
 # Change Log
+- 1.1.0  (15th July 2020)
+  - ISE connectivity, version and health cheacks
+  - cassandra checks
+  - fileId missing in fileservice check
+  - stale mount check - CSCvt95075
+  - maglev and kube certs validity - CSCvr26534
+  
 - 1.0.4  (14th July 2020)
   - count /etc/resolv.conf entries
   - fix bug with unknown device role
