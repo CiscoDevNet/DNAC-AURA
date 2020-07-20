@@ -1,4 +1,19 @@
 # Change Log
+- 1.1.1  (20th July 2020)
+  - ISE checks 
+  - Commenting out unused imports
+  - Added error logging to include Bug IDs for a few checks
+  - check for external auth - CSCvu83230
+  - add package, platform numbers for 2.1.1.3
+  - Added check for CSCvq46058
+  - Added memory, disk and process checks for ISE
+  - change resolve.conf from 3->4 as extra kube-dns entry
+  - collect memberid
+  - added insecure option to cxd curl and fixed resolv.conf crash
+  - ISE Check - checking for inactive & Bad passwords in ISE
+  - Adding check for CSCvp60100
+  - logging of resolv.conf
+
 - 1.1.0  (15th July 2020)
   - ISE connectivity, version and health cheacks
   - cassandra checks
