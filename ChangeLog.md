@@ -1,4 +1,16 @@
 # Change Log
+- 1.1.3  (25th July 2020)
+  - Files uploading to the SR
+  - Added Bug ID ref to NTP Service Check
+  - Fixed DNAC Version retrieval
+  - fixed ur_info for non running pods check
+  - count /etc/network/interfaces dns entrie
+  - catch error for all Upgrade Readiness checks
+  - add description for CSCvr63900 for dns >3
+  - Added Check for Cached MTU
+  - fix dns formatting
+  - count dns etcd per node; display per interface dns entries
+
 - 1.1.2  (22nd July 2020)
   - fix ntp config perms on /etc/ntpd.conf
   - catcherror modifed to create a specific error
