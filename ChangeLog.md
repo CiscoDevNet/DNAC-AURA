@@ -1,4 +1,13 @@
 # Change Log
+- 1.1.4  (29th July 2020)
+  - Fixed Backup Display check to handle missing server config
+  - Check truststore ISE cert expiry and duplication - CSCvu23957
+  - New check for CSCvs24346 - CHECK IF ETCD BINDING IS TO LOOPBACK (LOCALHOST/127.0.0.1)
+  - add 1.3.3.6 to CSCvu83230 - change default behaviour for external DNAC auth
+  - Added new Upgrade Readiness Check for Last Successful Backup
+  - Added check for CSCvt27360 - DNAC-ISE Integration issue, bad credentials
+  - Added check for CSCvu77846  After upgrade to 2.1, switch provision is blocked if it is not running 16.12.2 and newer code
+  
 - 1.1.3  (25th July 2020)
   - Files uploading to the SR
   - Added Bug ID ref to NTP Service Check
