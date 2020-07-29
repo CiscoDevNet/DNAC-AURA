@@ -19,6 +19,7 @@
   - Added Check for Cached MTU
   - fix dns formatting
   - count dns etcd per node; display per interface dns entries
+  - Fabric device compatibility check for 1.3.3.6
 
 - 1.1.2  (22nd July 2020)
   - fix ntp config perms on /etc/ntpd.conf
