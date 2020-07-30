@@ -76,4 +76,4 @@ optional arguments:
               Report will be generated with the diffs.
               
  ```
-{{ChangeLog.md}}
+{{ ChangeLog.md }}
