@@ -1,4 +1,12 @@
 # Change Log
+- 1.1.5  (5th August 2020)
+  - Added SY5 to Compatibility
+  - Fix ISE ver to accomodate root version
+  - updated Mongo collector check to print Bug ID as Info
+  - check dns resolution - under 2sec response for all DNS servers
+  - Fetching SGTs & SGACLs from ISE PAN
+  - Added top 10 pods utilization in /var to iNodes Check (with names)
+  
 - 1.1.4  (29th July 2020)
   - Fixed Backup Display check to handle missing server config
   - Check truststore ISE cert expiry and duplication - CSCvu23957
