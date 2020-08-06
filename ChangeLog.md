@@ -1,4 +1,21 @@
 # Change Log
+- 1.1.6  (6th August 2020)
+  - tweak error for IO retry
+  - clarified message for IO failure
+  - clarified internal AURA exceptions
+  - WLC/eWLC Assurance checks are now moved to default run
+  - Check Docker Daemon proxy settings
+  - Added New Check for IP Pool Migration Issue
+  - Fixed diskspace check logging to capture top 10 dirs util info in error condition 
+  - change bugid for ISE trust store from CSCvu23957  to CSCvv05807
+  - Fixed Node Status Check to validate exact string, Added debug logging to FileService Check 
+  - Node Updater and Hook Installer Service Check 
+  - fixed dns etcd error in format string leading to exception
+  - Adding Product Details and Count to Total Devices Scale Check
+  - display DNAC certificate SAN entries
+  - Fixed Stale Mounts Check to handle stderr, fixed run_shell func to return correct error code and output
+  - Fixed diskspace check to validate <=2G
+  
 - 1.1.5  (5th August 2020)
   - Added SY5 to Compatibility
   - Fix ISE ver to accomodate root version
