@@ -1,5 +1,14 @@
 # Change Log
-- 1.1.6  (6th August 2020)
+- 1.1.6  (7th August 2020)
+  - 
+  - Missed adding upgrade readiness to the overall count in report
+  - Fixed IP pool migration check to skip if DNAC version is 1.2.x
+  - corrected node display check for Cyclops
+  - included ewlc telemetry connection new format
+  - Fixed Error messages for Cmd Exec Failures
+  - Upgrade path to 1.3.3.6, directories & files will now have mode 755
+  - Fixed NTP Check to error out for offset > 300 ms
+  - Fixed Mongo Sync Check to throw error only if more than 60secs behinid primary
   - tweak error for IO retry
   - clarified message for IO failure
   - clarified internal AURA exceptions
