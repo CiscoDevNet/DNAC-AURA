@@ -1,6 +1,6 @@
 # Change Log
+
 - 1.1.6  (7th August 2020)
-  - 
   - Missed adding upgrade readiness to the overall count in report
   - Fixed IP pool migration check to skip if DNAC version is 1.2.x
   - corrected node display check for Cyclops
