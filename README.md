@@ -2,19 +2,37 @@
 
 The Cisco DNA Center AURA (Audit & Upgrade Readiness) command line tool performs a variety of health, scale & upgrade readiness checks for the DNA Center and the rest of the Fabric network. The tool is extremely simple to run and is executed on the DNA Center. The tool uses API calls, DB reads & show commands (read only operations) and hence, doesn't affect performance or cause impact to the DNA Center or the networking devices.
 
-## To Run
+## To Download
+
 This script needs to be downloaded onto Cisco DNA Center.  First ssh to DNAC.
 
 ```
 ssh -p2222 maglev@<dnacIP>
 ```
 
-The next step is to download to Cisco DNA Center. 
+The next step is to get the script onto Cisco DNA Center.  There are three ways of doing this, depending on access from DNAC to the internet 
+### Option 1.  git clone direct
+If you have access to the internet from DNAC, can clone the repository (containing the executable)
 
 ```
 git clone https://github.com/CiscoDevNet/DNAC-AURA.git
 ```
+### Option 2. git clone via proxy
+If DNAC needs a proxy to get to the internet, you will need to provide a proxy for git command.
+NOTE:  please do not set a permanent environment variable as this will stop you from accessing some DNAC commands like maglev.
 
+The example below uses an inline environment variable, just for the git command.  Make sure to put in the correct proxy url (including port) 
+```
+https_proxy=https//<your proxy> git clone https://github.com/CiscoDevNet/DNAC-AURA.git
+```
+
+### Option 3. Isolated environment.  
+You will need to clone (using method 1 or 2) to an intermediate machine and copy to DNAC, using scp.  Remember to use port 2222 with the -P option to scp.
+```
+scp -P 2222 ./DNAC-AURA/dnac_aura  maglev@<mydnac>:
+```
+
+## To Run
 There will be a directory called DNAC-AURA.  You can either change into directory, or run direct from the home directory.
 You will be prompted for the admin username and password as well as the sudo password (maglev password).
 ```
