@@ -12,7 +12,6 @@
   - Added 1.3.3.7 to compatibility and upgrade path
   - Display device and client health counts in assurance
   - Adding 1.3.3.7 version
-  - process device health summary
   - trap exception in File-service for missing FileID mappings 
   - placeholder for new SDA  role 18
   - catch missing SDA role
