@@ -113,12 +113,10 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #12:Checking:Docker Proxy settings
 #13:Checking:Kubelet Status
 #14:Checking:Version of Cisco DNA Center this was built from
- INFO:Check completed successfully
 #15:Checking:Cluster Node Reachability - nodes : [u'10.10.10.144']
 #16:Checking:Interface Reachability - all nodes : [u'10.66.104.84', u'10.10.10.144']
 #17:Checking:VIP Reachability - VIPs : []
 #01:Checking:Cluster Subnet Overlap with Internal Addresses
-INFO:Subnet Overlap Check Looks OK
 #18:Checking:Number of DNS servers configured in etcd on nodes (<=3)
 #19:Checking:Number of /etc/resolv.conf entries (<=4)
 #20:Checking:DNS config - /etc/network/interfaces
@@ -126,18 +124,12 @@ INFO:Subnet Overlap Check Looks OK
 #22:Checking:DNS server can resolve www.ciscoconnectdna.com
 #23:Checking:NTP server Sync : [u'ntp.esl.cisco.com']
 #24:Checking:Certificate Validity and Expiry
- INFO:Certificate Validity Check looks OK. It is valid for 121 more days
 #25:Checking:Expiry of truststore certificates
 #26:Checking:NTP Service status on the Cisco DNA Center
 #27:Checking:NTP Server Time Sync
 #28:Checking:Status of PMTU discovery
 #29:Checking:Node Display
 #30:Checking:Node Status
- INFO:Checking Condition OutOfDisk
- INFO:Checking Condition MemoryPressure
- INFO:Checking Condition DiskPressure
- INFO:Checking Condition PIDPressure
- INFO:Checking Condition Ready
 #31:Checking:Appstack Status
 #32:Checking:Check Services for High Restart Counts
 #33:Checking:State of ISE states in DB
@@ -156,13 +148,11 @@ INFO:Subnet Overlap Check Looks OK
 #46:Checking:Checking MongoDB for Stale Connections from collector-manager
 #47:Checking:Checking MongoDB CPU in docker stats
 #48:Checking:Checking if MongoDB is locked
-Checking if Mongodb is writeable...
 #49:Checking:InfluxDB Health
 #50:Checking:InfluxDB Memory Utilization
 #51:Checking:Cassandra Health
 #52:Checking:Cassandra status
 #53:Checking:Rabbitmq Cluster Health
-Checking health of node 'rabbit@rabbitmq-0.rabbitmq.maglev-system.svc.cluster.local' ...
 #54:Checking:Rabbitmq Cluster Status
 #55:Checking:Rabbitmq Queue Status
 #56:Checking:Rabbitmq Queues with Unacknowledged messages
@@ -181,7 +171,6 @@ Checking health of node 'rabbit@rabbitmq-0.rabbitmq.maglev-system.svc.cluster.lo
 #10:Checking:Collector-ISE config has been cleaned up after a previous upgrade
 #11:Checking:Backup Display to find Last Successful Backup
 #12:Checking:Provision fail due to invalid migration status parameter
-INFO:Check Passed
 #13:Checking:Maglev Hook Installer Service status on the Cisco DNA Center
 #14:Checking:Maglev Node Updater Service status on the Cisco DNA Center
 #15:Checking:DNA Center Upgrade Path to the latest patch off 1.3.3.x
@@ -225,7 +214,6 @@ INFO:Check Passed
 #26:Checking:eWLC Fabric WLAN Check
 ****** Upgrade Readiness SDA Checks ******
 #17:Checking:Fabric Devices Compatibility with DNA Center Version 1.3.3.7
-INFO:Site Global/SYD - Compatibility Check passed for 3 devices (compatible versions:device count) - {u'16.12.3s': 2, u'8.10.112.0': 1}
 #18:Checking:IP Pool Migration
 ****** Running Scale Checks ******
 #01:Checking:Scale : Number of Sites
