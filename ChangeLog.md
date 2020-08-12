@@ -1,5 +1,27 @@
 # Change Log
 
+- 1.1.7  (12 August 2020)
+  - version display on PDF 1st page
+  - Avoiding AURA crash if command runner times out
+  - Displaying 1st 100 SGTs & SGACLs from ISE... logging it too...
+  - Added 3 retries to command runner if its busy
+  - Fixes to Mongo CPU check , Influx Memory check 
+  - Fixed ETCD Binding False Positive, Added Cassandra Key distribution check, Added AURA version to report header
+  - logtofile and used it for truststore and assurnace summary data
+  - Added logging for DRAM check and fixed wrong reference in check_installer_hook
+  - Added 1.3.3.7 to compatibility and upgrade path
+  - Display device and client health counts in assurance
+  - Adding 1.3.3.7 version
+  - process device health summary
+  - trap exception in File-service for missing FileID mappings 
+  - placeholder for new SDA  role 18
+  - catch missing SDA role
+  - pmtu check - CSCvs22065
+  - DRAM and Processor verifications
+  - Fixed Mongo Sync Status check
+  - Fixed NodeUpdater check to look for CSCvu93288 
+  - Added New Check for High Restart Counts
+  
 - 1.1.6  (7th August 2020)
   - Missed adding upgrade readiness to the overall count in report
   - Fixed IP pool migration check to skip if DNAC version is 1.2.x
