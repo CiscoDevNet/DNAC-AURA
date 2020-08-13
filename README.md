@@ -113,14 +113,14 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #12:Checking:Docker Proxy settings
 #13:Checking:Kubelet Status
 #14:Checking:Version of Cisco DNA Center this was built from
-#15:Checking:Cluster Node Reachability - nodes : [u'10.10.10.144']
-#16:Checking:Interface Reachability - all nodes : [u'10.66.104.84', u'10.10.10.144']
+#15:Checking:Cluster Node Reachability - nodes : 
+#16:Checking:Interface Reachability - all nodes : 
 #17:Checking:VIP Reachability - VIPs : []
 #01:Checking:Cluster Subnet Overlap with Internal Addresses
 #18:Checking:Number of DNS servers configured in etcd on nodes (<=3)
 #19:Checking:Number of /etc/resolv.conf entries (<=4)
 #20:Checking:DNS config - /etc/network/interfaces
-#21:Checking:DNS Reachability - DNS : [u'171.70.168.183']
+#21:Checking:DNS Reachability - DNS : 
 #22:Checking:DNS server can resolve www.ciscoconnectdna.com
 #23:Checking:NTP server Sync : [u'ntp.esl.cisco.com']
 #24:Checking:Certificate Validity and Expiry
