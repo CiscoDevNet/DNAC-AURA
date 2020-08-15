@@ -1,5 +1,18 @@
 # Change Log
-
+- 1.1.8  (15 August 2020)
+    - SDA Border/CP/Edge captures are now site aware with seperate log file per site
+    - Added Bug ID to Duplicate SGT tag check
+    - tweaked error reporting for Cassandra check
+    - Fixed Cert Validity check to handle error for -ve return(Already expired certs)
+    - Fixed ETCD Binding Check to only validate loopback IP
+    - added logging to etcd binding check
+    - trapped empty device health data
+    - Check REST API - BAPI - CSCvr70208
+    - tweaks to reporting for exited containers and non running pods
+    - added missing comma
+    - catch DB exception when collecting fabric data
+    - refactored appstack check and added endpoint check to detect more down services
+       
 - 1.1.7  (12 August 2020)
   - version display on PDF 1st page
   - Avoiding AURA crash if command runner times out
