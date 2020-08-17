@@ -23,7 +23,7 @@ NOTE:  please do not set a permanent environment variable as this will stop you 
 
 The example below uses an inline environment variable, just for the git command.  Make sure to put in the correct proxy url (including port) 
 ```
-https_proxy=https//<your proxy> git clone https://github.com/CiscoDevNet/DNAC-AURA.git
+https_proxy=https://<your proxy> git clone https://github.com/CiscoDevNet/DNAC-AURA.git
 ```
 
 ### Option 3. Isolated environment.  
