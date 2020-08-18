@@ -31,6 +31,12 @@ You will need to clone (using method 1 or 2) to an intermediate machine and copy
 ```
 scp -P 2222 ./DNAC-AURA/dnac_aura  maglev@<mydnac>:
 ```
+## To get the latest version
+We are adding new features quite often.  If you have downloaded an older version, it is very easy to get the latest.  Provided you used option #1 or #2, you can simply change directory into the DNAC-AURA directory and use git pull, instead of git clone.  You might need to provide proxy as in option #2.
+```
+$ cd ./DNAC-AURA
+$ git pull
+```
 
 ## To Run
 There will be a directory called DNAC-AURA.  You can either change into directory, or run direct from the home directory.
