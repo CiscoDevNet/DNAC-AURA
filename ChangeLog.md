@@ -1,4 +1,16 @@
 # Change Log
+- 1.1.9  (19 August 2020)
+    - Hyperlinks for Comp Matrix and all Bugs
+    - Fixed docker proxy check false positive due to username in field
+    - BGP Checks are now site aware
+    - Tweaked high util on /data/nfs(backup server) to be reported as warning instead of error
+    - Added new check for AAA Servers Status Info, modified psql query func to add additional param to include header in op
+    - tightend ISE ccert check, duplicate serial from same issuer
+    - correct logfile for maglev catalog settings display
+    - Fixed High Restarts check - handled terminated services in Completed State
+    - tweak error when IO test fails to execute
+    - ISE Scale check should include only Active connections
+    
 - 1.1.8  (15 August 2020)
     - SDA Border/CP/Edge captures are now site aware with seperate log file per site
     - Added Bug ID to Duplicate SGT tag check
