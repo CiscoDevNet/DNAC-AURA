@@ -4,7 +4,7 @@
    - Added --maglev-pass and --admin-pass as command line options. Simplify remote launch
    - Tweak to diskspace check reporting
    - refactored check_build and get_dnac_version to use PackageCache
-   - add args for maglev and admin, fix float issue for disk speed
+   - fix float issue for disk IO failure to execute error
    - support for --syslog option to log errors to remote syslog server
    - check for Data Center Bridging Exchange Protocol (DCBX)on upstream switch - CSCvq32094
    - Fixed nodeupdater check to only run if there is an upgrade failure in node update phase
