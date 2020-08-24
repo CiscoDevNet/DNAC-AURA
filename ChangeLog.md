@@ -1,5 +1,5 @@
 # Change Log
-- 2.0.1  (24 August 2020)
+- 1.2.0  (24 August 2020)
    - Assurance checks for non fabric IOSXE WLCs
    - Added -d option for DNAC Infra checks only
    - minor fix - logging util for diskspace
