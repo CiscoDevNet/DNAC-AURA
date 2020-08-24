@@ -77,28 +77,36 @@ Report and Logs can be found at:
 ## Other Options
 ```
 ./DNAC-AURA/dnac_aura --help
-usage: dnac_aura [-h] [-v] [-V] [-s] [-u U] [-n N] [-o] [-c]
+usage: dnac_aura [-h] [-v] [-V] [-s] [-u U] [-n N] [--syslog SYSLOG]
+                 [--admin-pass ADMIN_PASS] [--maglev-pass MAGLEV_PASS] [-o]
+                 [-c]
 
 Select options.
 
 optional arguments:
-  -h, --help  show this help message and exit
-  -v          verbose
-  -V          version information
-  -s          Run additional SDA checks. To execute these checks, the tool
-              will login to other devices in the fabric and collect show
-              command outputs.
-  -u U        Upload report and logs file to the SR. Please provide SR and
-              password in the format sr_number:sr_password
-  -n N        Add customer name to the PDF report on the first page (the
-              summary page)
-  -o          To collect CLI outputs from the network devices via the Cisco
-              DNA Center. Ensure you have the captureFile.yaml in the same
-              folder as this tool.
-  -c          Compare configurations across multiple devices. You can choose 2
-              timestamps from previous captures taken with the -o option. PDF
-              Report will be generated with the diffs.
-              
+  -h, --help            show this help message and exit
+  -v                    verbose logging
+  -V                    version information
+  -s                    Run additional SDA checks. To execute these checks,
+                        the tool will login to other devices in the fabric and
+                        collect show command outputs.
+  -u U                  Upload report and logs file to the SR. Please provide
+                        SR and password in the format sr_number:sr_password
+  -n N                  Add customer name to the PDF report on the first page
+                        (the summary page)
+  --syslog SYSLOG       destination syslog server
+  --admin-pass ADMIN_PASS
+                        maglev admin password (this is the UI password for
+                        admin user
+  --maglev-pass MAGLEV_PASS
+                        maglev password (for sudo)
+  -o                    To collect CLI outputs from the network devices via
+                        the Cisco DNA Center. Ensure you have the
+                        captureFile.yaml in the same folder as this tool.
+  -c                    Compare configurations across multiple devices. You
+                        can choose 2 timestamps from previous captures taken
+                        with the -o option. PDF Report will be generated with
+                        the diffs.     
  ```
 
 For release updates, see ChangeLog.md
