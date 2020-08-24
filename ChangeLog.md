@@ -1,6 +1,8 @@
 # Change Log
 - 2.0.1  (24 August 2020)
    - Assurance checks for non fabric IOSXE WLCs
+   - Added -d option for DNAC Infra checks only
+   - minor fix - logging util for diskspace
    - Added --maglev-pass and --admin-pass as command line options. Simplify remote launch or crontab launch
    - Tweak to diskspace check reporting
    - refactored check_build and get_dnac_version to use PackageCache
