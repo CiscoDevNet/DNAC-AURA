@@ -1,4 +1,15 @@
 # Change Log
+- 2.0.1  (24 August 2020)
+   - Assurance checks for non fabric IOSXE WLCs
+   - Added --maglev-pass and --admin-pass as command line options. Simplify remote launch
+   - Tweak to diskspace check reporting
+   - refactored check_build and get_dnac_version to use PackageCache
+   - add args for maglev and admin, fix float issue for disk speed
+   - support for --syslog option to log errors to remote syslog server
+   - check for Data Center Bridging Exchange Protocol (DCBX)on upstream switch - CSCvq32094
+   - Fixed nodeupdater check to only run if there is an upgrade failure in node update phase
+   - Merged Diskspace and iNodes Check, Fixed validation for Service Restarts Check
+   
 - 1.1.9  (19 August 2020)
     - Hyperlinks for Comp Matrix and all Bugs
     - Fixed docker proxy check false positive due to username in field
