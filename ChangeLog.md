@@ -1,4 +1,18 @@
 # Change Log
+- 1.2.1  (01 September 2020)
+    - Added links to Section Titles on Summary page to Detailed Results of each
+    - skip device/client health for older DNAC < 1.3
+    - comment out old version_cache, add 2.1.2.0 system + ui versions
+    - fix for remaining args, no proxy - run_remote.py
+    - added GB/s as valid I/O throughput, so IO test does not fail
+    - Tweaked Mongo stale conns check - Warning if > 100k but < 1 mil
+    - New check for CSCvi73428 - Checking if SSL Intercept is configured in the Network
+    - minor fix to Searchlog
+    - Fixed Scale Limit parser to pick expected limits based on DNAC version
+    - Scale parameters included for 2.1.x and 1.3.3.x release
+    - Tweak to influx db check - mention limit check of > 20G in Error
+    - Refactored Influx Check to report last terminated time for OOM and always display db size
+    
 - 1.2.0  (24 August 2020)
    - Assurance checks for non fabric IOSXE WLCs
    - Added -d option for DNAC Infra checks only
