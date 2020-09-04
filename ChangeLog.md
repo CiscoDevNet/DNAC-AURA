@@ -10,6 +10,7 @@
    - Enhanced the Processor cores table display
    - ewlc assurance checks for DNAC-CA & sdn-network-infra-iwan truststores and certificates
    - Fixed DNAC test results are seen twice in the pdf report
+   
 - 1.2.1  (01 September 2020)
     - Added links to Section Titles on Summary page to Detailed Results of each
     - skip device/client health for older DNAC < 1.3
