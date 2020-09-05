@@ -1,4 +1,10 @@
 # Change Log
+- 1.2.3  (05 September 2020)
+    - fix for error in redis check, where no redis running
+    - dcbx test look in kern.log.1 as well as kern.log
+    - added interface error warning
+    - Push Comp Matrix full results to a file and summry in the report
+    
 - 1.2.2  (04 September 2020)
    - correct scale for totDevices for 131, 211
    - check kern.log for errors
