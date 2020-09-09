@@ -1,4 +1,21 @@
 # Change Log
+- 1.2.4  (09 September 2020)
+    - README for run_remote
+    - fill out all check/error/warning in json-summary
+    - single digit GB/s io ok
+    - check for 30 fabric sites in the domain - CSCvv30308
+    - new package_cache
+    - directory for run_remote
+    - Fixed etcd binding check to handle nxdomain return and false positive for ipv6
+    - --no-pull option for run_remote
+    - activate refactored rabbit check
+    - fix df hang, non responsive nfs, added chcek for non responsive nfs - CSCvs93317
+    - added --json-summary option for AURA
+    - check to ensure running aura as user maglev, not as root
+    - refactor rabbit status
+    - added versions for 2.2.1 - magneto
+    - added keepalive for run_remote for ssh idle timeout
+    
 - 1.2.3  (05 September 2020)
     - fix for error in redis check, where no redis running
     - dcbx test look in kern.log.1 as well as kern.log
