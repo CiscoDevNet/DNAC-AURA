@@ -1,4 +1,17 @@
 # Change Log
+- 1.2.5  (12 September 2020)
+    - Speeded up checks that use fabric site hierarchy
+    - Command Capture with -o option is now site aware
+    - Check pxGrid status on dedicated pxGrid node and more details provided in error for CSCvu77846
+    - log ISE serials for truststore debug
+    - Fixed diskspace checks to use df-l , Added new check to see if glusterfs mounted
+    - added --all-cluster to run_remote on run all nodes in the cluster
+    - flag ISE cert as expired - error
+    - remove redis MacNameSpace count check, as redis can crash when low in memory
+    - tweak duplicate test to ignore _third_party alias
+    - Check for bug CSCvr06877 - LAN automation
+
+
 - 1.2.4  (09 September 2020)
     - README for run_remote
     - fill out all check/error/warning in json-summary
