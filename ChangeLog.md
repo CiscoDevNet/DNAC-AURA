@@ -1,5 +1,6 @@
 # Change Log
 - 1.2.5  (12 September 2020)
+    - added history of versions upgraded from in the past
     - Speeded up checks that use fabric site hierarchy
     - Command Capture with -o option is now site aware
     - Check pxGrid status on dedicated pxGrid node and more details provided in error for CSCvu77846
