@@ -2,18 +2,23 @@
 # YAML to capture outputs from the devices in the network
 # 
 # Steps to setup the capture file:
-# Step 1 :: Need to specify the Capture Name (multiple captures allowed).
-# Step 2 :: Under each Capture Name, need to specify the following:
-#           The devices: keyword which is: 
-#           - a list of Devices to capture the outputs. 
-#           - could be an IP address, hostname, specific keyword like AllE, allB and/or AllCP or a combination of all the above. 
-#           - (ALLE is all edges, AllB is Borders, AllCP are all control plane devices). The case is insensitive.
-#           The commands: ketword which is list of commands to be executed
+# Step 1 :: Specify the Capture Name (multiple captures allowed).
+# Step 2 :: Under each Capture Name, specify the following:
+#           devices:   (a list of Devices to capture the outputs from)
+#             - one or more IP addresses, 
+#             - one or more hostnames or 
+#             - specific keywords - AllE, allB and/or AllCP or a combination of the three 
+#             - (ALLE is all edges, AllB is Borders, AllCP are all control plane devices) The case is insensitive.
+#           sites: 
+#             - this filter works only if a specific keyword like Alle, allb or allcp is specified
+#             - filters devices from one or more sites 
+#           commands: 
+#             - list of commands to be executed
 #
 # For Example:
 # cap1: <-- Define a Capture Name
-#   devices: 172.23.251.2,allE, Fusion-1         devices can be a combination of IP addresses and/or the keywords AllE, AllB or AllCP (case insensitive)
-#   commands: 				List of commands to be executed
+#   devices: 172.23.251.2,allE, Fusion-1  <-- devices can be a combination of IP addresses and/or the keywords AllE, AllB or AllCP (case insensitive)
+#   commands: 	    <-- List of commands to be executed
 #      - show interface
 #      - show ver
 #
@@ -27,6 +32,8 @@ cap1:
 
 capALLE:
    devices: ALLE
+   sites:
+       - Global/USA/sanjose1
    commands:                                         
        - show ver 
        - show running

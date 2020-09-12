@@ -4,7 +4,7 @@ from paramiko import  SSHClient, AutoAddPolicy,AuthenticationException
 from scp import SCPClient
 import json
 import os
-from ipaddress import IPv4Interface
+from ipaddress import IPv4Interface, ip_address
 from argparse import ArgumentParser, REMAINDER
 
 def connect(ip, password):
@@ -43,11 +43,17 @@ def get_cluster_members(dnac, maglev):
         stdin, stdout, stderr = conn.exec_command(full_cmd)
         iplist = stdout.readlines()
 
+        dnacip = ip_address(dnac)
+        network = None
         for ip in iplist:
             ipa = IPv4Interface(ip.strip())
             print(ipa)
-            if dnac == str(ipa.ip):
+            if dnacip in ipa.network:
                 network = ipa.network
+
+        if network == None:
+            print("cannot find matching network on DNAC for {}".format(dnac))
+
         targets =[]
         for ip in iplist:
             ipa = IPv4Interface(ip.strip())
