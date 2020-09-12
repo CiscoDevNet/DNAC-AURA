@@ -81,6 +81,10 @@ cat RUN_REMOTE/logs/*/DNAC_AURA_Report_2020-09-08_23_20_11.json
   }
 }
 ```
+## Cluster execution
+If using the --all-cluster option, the script will find all memebers of the cluster and run AURA on each one.  
+Currently this is a serial execution.  Can be used with --local-dir to copy the report, logfile and json-summary
+back from DNAC.
 
 ## Other options
 The script can also be run with the --no-pull option.  This stops the git pull to update to the 
@@ -99,3 +103,5 @@ Need to supply the python interpreter explicitly to pick up the virtual environm
 ```buildoutcfg
 00 * * * * /home/aradford/RUN_REMOTE/env3/bin/python /home/aradford/RUN_REMOTE/run_remote.py --dnac 10.1.1.1 --admin-pass passwd --maglev-pass passwd --local-dir /home/aradford/RUN_REMOTE/logs > /tmp/run
 ```
+
+This can be wrapped further by a shell script to protect the credentials from being stored in plain text.

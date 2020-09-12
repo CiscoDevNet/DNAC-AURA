@@ -4,6 +4,7 @@ from paramiko import  SSHClient, AutoAddPolicy,AuthenticationException
 from scp import SCPClient
 import json
 import os
+from ipaddress import IPv4Interface
 from argparse import ArgumentParser, REMAINDER
 
 def connect(ip, password):
@@ -11,7 +12,7 @@ def connect(ip, password):
         ssh = SSHClient()
         ssh.set_missing_host_key_policy(AutoAddPolicy())
 
-        print('Initiating SSH to  {} ...'.format(ip))
+        print('Initiating SSH to {}...'.format(ip))
         ssh.connect(ip, port=2222, username="maglev", password=password ,look_for_keys=False)
 
         # use keepalive to keep connection open to DNAC with idle timeout=5mins
@@ -31,6 +32,31 @@ def validate_op(stdout, stderr):
     else:
         print(status)
 
+def get_cluster_members(dnac, maglev):
+    print("Getting other cluster members..")
+    with  connect(dnac, maglev) as conn:
+        cmd = "etcdctl ls /maglev/config | grep node | sed -e 's#$#/network#' | xargs -n1 etcdctl get | jq -r '"
+        jq = '.[] |.inet | .host_ip + "/" + .netmask'
+        final = "' | grep -v '^[/]$' "
+        full_cmd = cmd + jq + final
+        #print(full_cmd)
+        stdin, stdout, stderr = conn.exec_command(full_cmd)
+        iplist = stdout.readlines()
+
+        for ip in iplist:
+            ipa = IPv4Interface(ip.strip())
+            print(ipa)
+            if dnac == str(ipa.ip):
+                network = ipa.network
+        targets =[]
+        for ip in iplist:
+            ipa = IPv4Interface(ip.strip())
+            if ipa.network == network:
+                targets.append(str(ipa.ip))
+
+    return targets
+
+
 def copy_files(conn, dnac, json_summary, dir):
     path = "{}/{}".format(dir, dnac)
     print("\n**** Checking local destination folder: {}".format(path))
@@ -47,7 +73,7 @@ def copy_files(conn, dnac, json_summary, dir):
     scp.get(json_summary['json-summary']['report-name'], local_path=path)
     scp.get(json_summary['json-summary']['logfile-name'], local_path=path)
 
-def main(dnac, maglev, admin, nopull, dir, rest):
+def run_aura(dnac, maglev, admin, nopull, dir, rest):
     #print (dnac, maglev, admin, rest)
     others = ''
     if rest != []:
@@ -115,6 +141,8 @@ if __name__ == "__main__":
                         help="admin (WEBUI) password")
     parser.add_argument('--no-pull', action='store_true', default=False,
                         help="do not pull down new copy of aura")
+    parser.add_argument('--all-cluster', action='store_true', default=False,
+                        help="all cluster members")
     parser.add_argument('--local-dir', type=str,
                         help="local directory to store report/logs")
     parser.add_argument('rest', nargs=REMAINDER)
@@ -125,4 +153,11 @@ if __name__ == "__main__":
     if args.maglev_pass == "password":
         print("\n** Warning, using default admin password, use DNAC_ADMIN_PASS environment var or --admin-pass")
 
-    main(args.dnac, args.maglev_pass, args.admin_pass, args.no_pull, args.local_dir, args.rest)
+    if args.all_cluster:
+        targets = get_cluster_members(args.dnac, args.maglev_pass)
+    else:
+        targets = [args.dnac]
+
+    for target in targets:
+        print("target:{}:".format(target))
+        run_aura(target, args.maglev_pass, args.admin_pass, args.no_pull, args.local_dir, args.rest)
