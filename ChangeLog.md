@@ -1,4 +1,13 @@
 # Change Log
+- 1.2.6  (14 September 2020)
+    -  added explicit check for timezone change on DNAC
+    -  add ok message for DNS config on interfaces, using coredns
+    -  print OK message if no ISE truststore expried certs
+    -  skip maglev login check when command line arg provided
+    -  change gluster mount to explicit check, to avoid nfs timeout
+    -  flag no upgrade history
+    -  catch error in old versions if no upgrade history
+    
 - 1.2.5  (12 September 2020)
     - added history of versions upgraded from in the past
     - Speeded up checks that use fabric site hierarchy
