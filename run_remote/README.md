@@ -45,6 +45,10 @@ To pass AURA specific arguments (for example -s to run SDA tests) you need to do
 ./run_remote.py --dnac 10.1.1.1 -- -s
 ```
 
+Make sure you include any run_remote options, such as --local-dir, all-cluster and --no-pull BEFORE the "--"
+
+AURA specific options such as -n, --syslog, -d, -s need to be after the "--"
+
 ## Storing aura output locally.
 AURA script supports the --json-summaary option. This produces a json summary of the test results as well as the 
 location of the report and log file on DNAC.  When run_remote is supplied with the --local-dir option, the 
@@ -85,6 +89,9 @@ cat RUN_REMOTE/logs/*/DNAC_AURA_Report_2020-09-08_23_20_11.json
 If using the --all-cluster option, the script will find all memebers of the cluster and run AURA on each one.  
 Currently this is a serial execution.  Can be used with --local-dir to copy the report, logfile and json-summary
 back from DNAC.
+
+Either a VIP or physical address can be provided.  The script will connect and look for all physical IP in the 
+same subnet as the IP used to connect.
 
 ## Other options
 The script can also be run with the --no-pull option.  This stops the git pull to update to the 
