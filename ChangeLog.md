@@ -1,4 +1,20 @@
 # Change Log
+- 1.2.7  (19 September 2020)
+    - tweak check_tenantintsegment_overflow to only run on primary mongo node
+    - both upgraded and attempted versions
+    - change IO to 100M for /tmp
+    - fix dump of ise serials for certs
+    - TenantId is wapping int - CSCvr19226
+    - Added compatibility check for 3560-cx
+    - Improved reporting for NTP Time Sync Check
+    - Skipping DRAM & Processor checks if VM
+    - Added new check for Disk Partition Mounts - CSCvv62098
+    - log ISE cert serials+issuer
+    - sort upate history
+    - added --admin-user (default admin) to both aura and run_remote
+    - modified errors - LISP edge session to include VN Anchoring & active telemetry error eWLC to include PI
+    - fixed null object exception while getting version
+
 - 1.2.6  (14 September 2020)
     -  added explicit check for timezone change on DNAC
     -  add ok message for DNS config on interfaces, using coredns
