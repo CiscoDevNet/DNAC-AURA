@@ -80,7 +80,7 @@ def copy_files(conn, dnac, json_summary, dir):
     scp.get(json_summary['json-summary']['logfile-name'], local_path=path)
 
 def run_aura(dnac, maglev, admin_pass, admin_user, nopull, dir, rest):
-    #print (dnac, maglev, admin, rest)
+    #print (dnac, maglev, admin_pass, admin_user, nopull, dir, rest)
     others = ''
     if rest != []:
         others = ' '.join(rest[1:])
@@ -109,7 +109,7 @@ def run_aura(dnac, maglev, admin_pass, admin_user, nopull, dir, rest):
         print("\n\n****** EXECUTING AURA ON NODE : {} ******\n\n".format(dnac))
         json_flag = "--json-summary" if dir is not None else ""
         admin_user_flag = "--admin-user {}".format(admin_user) if admin_user != "admin" else ""
-        cmd = "/home/maglev/DNAC-AURA/dnac_aura  --admin-pass {} --maglev-pass {} {} {}".format(admin_pass,maglev, admin_user_flag, json_flag, others)
+        cmd = "/home/maglev/DNAC-AURA/dnac_aura  --admin-pass {} --maglev-pass {} {} {} {}".format(admin_pass,maglev, admin_user_flag, json_flag, others)
         #print(cmd)
         stdin, stdout, stderr = conn.exec_command(cmd,get_pty=True)
         while True:
