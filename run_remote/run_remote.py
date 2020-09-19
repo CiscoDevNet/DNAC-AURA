@@ -79,7 +79,7 @@ def copy_files(conn, dnac, json_summary, dir):
     scp.get(json_summary['json-summary']['report-name'], local_path=path)
     scp.get(json_summary['json-summary']['logfile-name'], local_path=path)
 
-def run_aura(dnac, maglev, admin, nopull, dir, rest):
+def run_aura(dnac, maglev, admin_pass, admin_user, nopull, dir, rest):
     #print (dnac, maglev, admin, rest)
     others = ''
     if rest != []:
@@ -108,7 +108,9 @@ def run_aura(dnac, maglev, admin, nopull, dir, rest):
         json_summary = {}
         print("\n\n****** EXECUTING AURA ON NODE : {} ******\n\n".format(dnac))
         json_flag = "--json-summary" if dir is not None else ""
-        cmd = "/home/maglev/DNAC-AURA/dnac_aura --admin-pass {} --maglev-pass {} {} {}".format(admin,maglev, json_flag, others)
+        admin_user_flag = "--admin-user {}".format(admin_user) if admin_user != "admin" else ""
+        cmd = "/home/maglev/DNAC-AURA/dnac_aura  --admin-pass {} --maglev-pass {} {} {}".format(admin_pass,maglev, admin_user_flag, json_flag, others)
+        #print(cmd)
         stdin, stdout, stderr = conn.exec_command(cmd,get_pty=True)
         while True:
             line = stdout.readline()
@@ -145,6 +147,8 @@ if __name__ == "__main__":
                         help="maglev password")
     parser.add_argument('--admin-pass', type=str,default=os.environ.get('DNAC_ADMIN_PASS','password'),
                         help="admin (WEBUI) password")
+    parser.add_argument('--admin-user', type=str, default=os.environ.get('DNAC_ADMIN_USER', 'admin'),
+                        help="admin (WEBUI) username - default is admin")
     parser.add_argument('--no-pull', action='store_true', default=False,
                         help="do not pull down new copy of aura")
     parser.add_argument('--all-cluster', action='store_true', default=False,
@@ -166,4 +170,4 @@ if __name__ == "__main__":
 
     for target in targets:
         print("target:{}:".format(target))
-        run_aura(target, args.maglev_pass, args.admin_pass, args.no_pull, args.local_dir, args.rest)
+        run_aura(target, args.maglev_pass, args.admin_pass, args.admin_user, args.no_pull, args.local_dir, args.rest)
