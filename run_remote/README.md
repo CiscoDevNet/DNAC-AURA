@@ -24,6 +24,9 @@ The script requires three arguments:
 - dnac
 - admin password (also available as an environment variable DNAC_ADMIN_PASS)
 - maglev password (also available as an environment variable DNAC_MAGLEV_PASS)
+- admin user (also available as an environment variable DNAC_ADMIN_USER).  This defaults to "admin",
+and only needs to be changed if using external auth and different superUser name.  In many cases, this is
+not required, but is available as --admin-user 
 
 the simplest way to run the script with arguments (see later section on environment vars) is
 ```buildoutcfg
