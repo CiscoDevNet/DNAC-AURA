@@ -1,4 +1,21 @@
 # Change Log
+- 1.2.8  (27 September 2020)
+     -  Add L2 sessions to the ISIS check
+     -  added container for rabbitQ check to avoid warning message
+     -  ISE pxgrid check for pxgrid process on PANs only
+     -  refactored update history, just use system_update_package status
+     -  magneto version
+     -  timeout x for kubectl curl
+     -  put in timeout for memberid in case telemetry-agent down
+     -  Fixed cached MTU check error for magneto
+     -  fixed rabbit queue validation for magneto, minor tweaks to reporting on other checks
+     -  config ntp servers, test unique configured
+     -  remove 1.3.3.6+ from CSCvu83230 description
+     -  remedyctl check
+     -  Added Diskspace Utilization validation to Glusterfs mount check
+     -  catch BAPI error on 1.2.x installs
+     -  New Check for Node Diagnosis , Tweaked logic to find primary mongo instance in  stale connections check
+     
 - 1.2.7  (19 September 2020)
     - tweak check_tenantintsegment_overflow to only run on primary mongo node
     - both upgraded and attempted versions
