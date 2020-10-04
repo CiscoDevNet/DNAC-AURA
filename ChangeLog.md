@@ -1,4 +1,15 @@
 # Change Log
+- 1.2.9  (04 October 2020)
+    - Added root ca expiry check - CSCvv95329, tweak real cert expiry
+    - catch ISE API timeout, and device health API failure
+    - check_ping returns status
+    - Warning check for CSCvu68204
+    - Fixed timezone check failing
+    - Fixed NTP Time Sync check to also validate bit buffer for reach discrepancies
+    - explimitvar catchall
+    - addedd errors to json-summary
+    - Added reference to CSCvt22551 for inodes check
+    
 - 1.2.8  (27 September 2020)
      -  Add L2 sessions to the ISIS check
      -  added container for rabbitQ check to avoid warning message
