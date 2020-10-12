@@ -1,4 +1,10 @@
 # Change Log
+- 1.3.0  (12 October 2020)
+    - added CSCvo23455 to parent repo var check
+    - added DB check for tenantid
+    - check for manual repository settings
+    - tweaks to rabbitmq check to only show queue diffs
+    
 - 1.2.9  (04 October 2020)
     - Added root ca expiry check - CSCvv95329, tweak real cert expiry
     - catch ISE API timeout, and device health API failure
