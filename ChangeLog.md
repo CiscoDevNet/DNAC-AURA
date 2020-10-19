@@ -1,6 +1,7 @@
 # Change Log
 - 1.3.1  (19 October 2020)
      - Fixed Catalog Settings Validate Check for Cyclops - 2 steps to validate status
+     - Added versions for 1.2.6(1)
      - Fixed exceptions with Secondary ISE PAN checks
      -  packages for 2.1.2.3
      - check for CSCvv86302 - WLC telemetry API call
