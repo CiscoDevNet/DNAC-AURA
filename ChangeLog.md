@@ -1,4 +1,14 @@
 # Change Log
+- 1.3.1  (19 October 2020)
+     - Fixed Catalog Settings Validate Check for Cyclops - 2 steps to validate status
+     - Fixed exceptions with Secondary ISE PAN checks
+     -  packages for 2.1.2.3
+     - check for CSCvv86302 - WLC telemetry API call
+     - remove CSCvu68204 check - elasticsearch
+     - show expired WLC cert
+     - only check extenal_auth <2.x
+     - run_remote binary, run on all nodes of cluster and logs moved to central location
+     
 - 1.3.0  (12 October 2020)
     - added CSCvo23455 to parent repo var check
     - added DB check for tenantid
