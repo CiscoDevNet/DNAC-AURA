@@ -43,7 +43,11 @@ def get_cluster_members(dnac, maglev):
         stdin, stdout, stderr = conn.exec_command(full_cmd)
         iplist = stdout.readlines()
 
-        dnacip = ip_address(dnac)
+        try:
+            dnacip = ip_address( unicode(dnac, "utf-8"))
+        except NameError:
+            dnacip = ip_address(dnac)
+
         network = None
         for ip in iplist:
             ipa = IPv4Interface(ip.strip())
