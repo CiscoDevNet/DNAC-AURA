@@ -1,4 +1,10 @@
 # Change Log
+- 1.3.2  (21 October 2020)
+     -  timeout for cassandra health
+     -  Compatibility & upgrade path checks updated with 1.3.3.8
+     -  add version cache for 1.3.3.8
+     -  verify cassandra container before check
+
 - 1.3.1  (19 October 2020)
      - Fixed Catalog Settings Validate Check for Cyclops - 2 steps to validate status
      - Added versions for 1.2.6(1)
