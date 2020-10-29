@@ -38,6 +38,13 @@ $ cd ./DNAC-AURA
 $ git pull
 ```
 
+##AURA Versions - Change Log
+For release updates, see ChangeLog.md
+
+https://github.com/CiscoDevNet/DNAC-AURA/blob/master/ChangeLog.md
+ 
+
+
 ## To Run
 There will be a directory called DNAC-AURA.  You can either change into directory, or run direct from the home directory.
 You will be prompted for the admin username and password as well as the sudo password (maglev password).
@@ -74,7 +81,22 @@ Report and Logs can be found at:
  -- All relevant output logs for this run can also be found here : /data/tmp/dnac_aura/logs/2020-07-07_04:20:09
 ```
 
-## Other Options
+## Cisco DNA Center AURA Options
+|  | No Options (default) | -s | -d | -o | -c |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| DNA Center Infra Health Checks | X | X | X |  |  |
+| DNA Center Assurance Health Checks | X | X |  |  |  |
+| WLC/eWLC Assurance Health Checks | X | X |  |  |  |
+| Basic SDA Checks (Inventory check) DNAC-ISE Integration (only if ISE is integrated) | X | X |  |  |  |
+| SDA(Fabric Device CLI collection, Control Plane & Security Plane Audit and Compatibility Check) |  | X |  |  |  |
+| Upgrade Readiness Checks (including bugs) | X | X |  |  |  |
+| DNA Center Scale (Fabric & Non Fabric scale parameters) | X | X | X |  |  |
+| Capture CLI Outputs from the fabric devices and store locally on the DNA Center - command and device list provided via file captureFile.yaml |  |  |  | X |  |
+| Compare configurations across multiple devices (based on outputs captured using -o option) |  |  |  |  | X |
+
+
+
+## Command Line Options
 ```
 ./DNAC-AURA/dnac_aura --help
 usage: dnac_aura [-h] [-v] [-V] [-s] [-u U] [-n N] [--syslog SYSLOG]
@@ -100,6 +122,7 @@ optional arguments:
                         admin user
   --maglev-pass MAGLEV_PASS
                         maglev password (for sudo)
+  -d                    Perform all DNA Center Infrastructure Health checks only
   -o                    To collect CLI outputs from the network devices via
                         the Cisco DNA Center. Ensure you have the
                         captureFile.yaml in the same folder as this tool.
@@ -109,76 +132,85 @@ optional arguments:
                         the diffs.     
  ```
 
-For release updates, see ChangeLog.md
+
 
 ## What does it check
-Run it to find out.  Here is a sample of some of the checks that are run
-```
-****** Running Platform Checks ******
+Run it to find out.  Here is a sample of some of the checks that are run:
+
+####Cisco DNA Center Health & Connectivity
+``` 
+#01:Checking:Determine Cisco DNA Center Product Type, Serial number, SW Version & Node IP
+#02:Checking:Determine Cisco DNA Center memberid
 #03:Checking:CPU Load Average
 #04:Checking:Disk Layout
-#05:Checking:Disk Space Usage
-#06:Checking:iNodes Utilization
-#07:Checking:Disk I/O throughput (>200MB/s)
-#08:Checking:DRAM Total Available Memory
-#09:Checking:DRAMs Installed in the appliance
-#10:Checking:Processor Cores Enabled and Status
-#11:Checking:Docker Status
-#12:Checking:Docker Proxy settings
-#13:Checking:Kubelet Status
-#14:Checking:Version of Cisco DNA Center this was built from
-#15:Checking:Cluster Node Reachability - nodes : 
-#16:Checking:Interface Reachability - all nodes : 
-#17:Checking:VIP Reachability - VIPs : []
+#05:Checking:Disk Space and iNodes Utilization
+#06:Checking:Disk I/O throughput (>200MB/s)
+#07:Checking:DRAM Total Available Memory
+#08:Checking:DRAMs Installed in the appliance
+#09:Checking:Processor Cores Enabled and Status
+#10:Checking:Docker Status
+#11:Checking:Docker Proxy settings
+#12:Checking:Kubelet Status
+#13:Checking:Version of Cisco DNA Center this was built from
+#14:Checking:Cluster Node Reachability - nodes : []
+#15:Checking:Interface Reachability - all nodes : []
+#16:Checking:VIP Reachability - VIPs : []
+#17:Checking:Number of DNS servers configured in etcd on nodes (<=3)
+#18:Checking:Number of /etc/resolv.conf entries (<=4)
+#19:Checking:DNS config - /etc/network/interfaces
+#20:Checking:DNS Reachability - DNS : []
+#21:Checking:DNS server can resolve www.ciscoconnectdna.com
+#22:Checking:NTP server Sync : []
+#23:Checking:DCBX upstream causing tx drops
+#24:Checking:check kernel logs for errors
+#25:Checking:Certificate Validity and Expiry
+#26:Checking:Expiry of truststore certificates
+#27:Checking:NTP Service status on the Cisco DNA Center
+#28:Checking:NTP Server Time Sync
+#29:Checking:Status of PMTU discovery
+#30:Checking:Node Display
+#31:Checking:Node Status
+#32:Checking:Appstack Status
+#33:Checking:Endpoint Status
+#34:Checking:Check Services for High Restart Counts
+#35:Checking:State of ISE states in DB
+#36:Checking:External authentication configured for DNAC users
+#37:Checking:Checking Count of Scalable Groups, Contracts and Access Policies in DNAC DB
+#38:Checking:Glusterfs Instances
+#39:Checking:Glusterfs NODE_NAME check
+#40:Checking:Glusterfs Clustering
+#41:Checking:ETCD Cluster Health
+#42:Checking:ETCD Storage Size
+#43:Checking:ETCD memory utilization
+#44:Checking:ETCD binding to loopback(localhost/127.0.0.1)
+#45:Checking:Postgres Cluster Status
+#46:Checking:Postgres size
+#47:Checking:MongoDB Cluster Health and Sync Status
+#48:Checking:Checking MongoDB for Stale Connections from collector-manager
+#49:Checking:Checking MongoDB CPU in docker stats
+#50:Checking:Checking if MongoDB is locked
+#51:Checking:InfluxDB Health
+#52:Checking:InfluxDB Memory Utilization
+#53:Checking:Cassandra Health
+#54:Checking:Cassandra status
+#55:Checking:Rabbitmq Cluster Health
+#56:Checking:Rabbitmq Cluster Status
+#57:Checking:Rabbitmq Queue Status
+#58:Checking:Rabbitmq Queues with Unacknowledged messages
+#59:Checking:Zookeeper Cluster Health
+#60:Checking:Zookeeper Cluster Status
+#61:Checking:REST API (BAPI) is responding
+#62:Checking:Backup History
+```
+
+####Upgrade Readiness
+```
 #01:Checking:Cluster Subnet Overlap with Internal Addresses
-#18:Checking:Number of DNS servers configured in etcd on nodes (<=3)
-#19:Checking:Number of /etc/resolv.conf entries (<=4)
-#20:Checking:DNS config - /etc/network/interfaces
-#21:Checking:DNS Reachability - DNS : 
-#22:Checking:DNS server can resolve www.ciscoconnectdna.com
-#23:Checking:NTP server Sync : [u'ntp.esl.cisco.com']
-#24:Checking:Certificate Validity and Expiry
-#25:Checking:Expiry of truststore certificates
-#26:Checking:NTP Service status on the Cisco DNA Center
-#27:Checking:NTP Server Time Sync
-#28:Checking:Status of PMTU discovery
-#29:Checking:Node Display
-#30:Checking:Node Status
-#31:Checking:Appstack Status
-#32:Checking:Check Services for High Restart Counts
-#33:Checking:State of ISE states in DB
-#34:Checking:External authentication configured for DNAC users
-#35:Checking:Checking Count of Scalable Groups, Contracts and Access Policies in DNAC DB
-#36:Checking:Glusterfs Instances
-#37:Checking:Glusterfs NODE_NAME check
-#38:Checking:Glusterfs Clustering
-#39:Checking:ETCD Cluster Health
-#40:Checking:ETCD Storage Size
-#41:Checking:ETCD memory utilization
-#42:Checking:ETCD binding to loopback(localhost/127.0.0.1
-#43:Checking:Postgres Cluster Status
-#44:Checking:Postgres size
-#45:Checking:MongoDB Cluster Health and Sync Status
-#46:Checking:Checking MongoDB for Stale Connections from collector-manager
-#47:Checking:Checking MongoDB CPU in docker stats
-#48:Checking:Checking if MongoDB is locked
-#49:Checking:InfluxDB Health
-#50:Checking:InfluxDB Memory Utilization
-#51:Checking:Cassandra Health
-#52:Checking:Cassandra status
-#53:Checking:Rabbitmq Cluster Health
-#54:Checking:Rabbitmq Cluster Status
-#55:Checking:Rabbitmq Queue Status
-#56:Checking:Rabbitmq Queues with Unacknowledged messages
-#57:Checking:Zookeeper Cluster Health
-#58:Checking:Zookeeper Cluster Status
-#59:Checking:Backup History
-****** Upgrade Readiness Checks ******
 #02:Checking:RCA Files Disk Usage
 #03:Checking:Count of Exited containers
 #04:Checking:Count of Non Running Pods
 #05:Checking:Maglev Catalog Settings
-#06:Checking:Direct connect to ciscoconnectdna
+#06:Checking:Proxy connect to ciscoconnectdna via:http://proxy.com:80 
 #07:Checking:Checking File-service for missing FileID mappings
 #08:Checking:Checking Expiry of Maglev Certs
 #09:Checking:Checking for Stale Mount Points
@@ -186,9 +218,16 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #11:Checking:Backup Display to find Last Successful Backup
 #12:Checking:Provision fail due to invalid migration status parameter
 #13:Checking:Maglev Hook Installer Service status on the Cisco DNA Center
-#14:Checking:Maglev Node Updater Service status on the Cisco DNA Center
+#14:Checking:Checking if SSL Intercept is configured in the Network
 #15:Checking:DNA Center Upgrade Path to the latest patch off 1.3.3.x
-****** Running Assurance Checks ******
+#16:Checking:ISE Compatibility check for ACA (Access Control Application)
+#17:Checking:Fabric Devices Compatibility with DNA Center Version 1.3.3.7
+#18:Checking:IP Pool Migration
+#19:Checking:Configured AAA Servers and their Status
+``` 
+
+####Cisco DNA Center Assurance
+``` 
 #01:Checking:Assurance Partition Disk Space Usage
 #02:Checking:Assurance Services Status
 #03:Checking:Check Assurance Backend Purge Job
@@ -196,21 +235,31 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #05:Checking:Assurance Pipeline status
 #06:Checking:Device health score summary
 #07:Checking:Client health score summary
-****** Running SDA Checks ******
+#08:Checking:Determine the SGTs & SGACLs via API on the Primary ISE Node
+#09:Checking:Capturing Commands from the Wireless Controllers
+#10:Checking:eWLC Telemetry Connection Status Check
+#11:Checking:eWLC Netconf Yang Datastore Check
+#12:Checking:eWLC sdn-network-infra-iwan Trustpoint & Certificates
+#13:Checking:eWLC DNAC-CA Trustpoint & Certificate
+#14:Checking:eWLC Device Network Assurance Status
+#15:Checking:AIREOS WLC Telemetry Connection Status Check
+``` 
+
+####SD-Access Health
+```
 #01:Checking:Fabric device reachability inventory status
 #02:Checking:Fabric inventory collection
 #03:Checking:SDA:Cisco DNA Center & ISE integration status
 #04:Checking:Verify the SSH connectivity between Cisco DNA Center and Cisco ISE
-#16:Checking:ISE Compatibility check for ACA (Access Control Application)
 #05:Checking:Cisco ISE Nodes Memory Usage
 #06:Checking:Cisco ISE Nodes Disks Usage
 #07:Checking:Status of the Cisco ISE processes
 #08:Checking:Determine the SGTs & SGACLs via API on the Primary ISE Node
-#09:Checking:SDA:Capturing Commands from the Borders/CPs/Edges/WLCs
+#09:Checking:SDA:Capturing Commands from the Borders/CPs/Edges
 #10:Checking:SDA:Software version and platform type count
 #11:Checking:SDA:Fabric devices CPU Utilization Check
 #12:Checking:SDA:Fabric devices Memory Utilization Check
-#13:Checking:SDA:Verify the number of LISP Sessions Established on the Fabric devices
+#13:Checking:SDA:Verify the number of LISP Sessions on the Fabric devices
 #14:Checking:SDA:Check the LISP IPv4 EID Table size on all Fabric devices
 #15:Checking:SDA:Check the LISP IPv4 MAP Cache Table size on the Borders
 #16:Checking:SDA:Check the ISIS Sessions state for the Fabric devices
@@ -220,16 +269,14 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #20:Checking:SDA:AAA Server connectivity from the devices
 #21:Checking:SDA:CTS PACS downloaded to the devices
 #22:Checking:SDA:CTS SGTs downloaded to the devices
-#08:Checking:eWLC Telemetry Connection Status Check
-#09:Checking:eWLC Netconf Yang Datastore Check
 #23:Checking:SDA:eWLC CPU Utilization Check
 #24:Checking:SDA:eWLC Memory Utilization Check
 #25:Checking:eWLC Fabric AP Check
 #26:Checking:eWLC Fabric WLAN Check
-****** Upgrade Readiness SDA Checks ******
-#17:Checking:Fabric Devices Compatibility with DNA Center Version 1.3.3.7
-#18:Checking:IP Pool Migration
-****** Running Scale Checks ******
+``` 
+
+####Cisco DNA Center Scale
+```
 #01:Checking:Scale : Number of Sites
 #02:Checking:Scale : Number of Access Control Policies
 #03:Checking:Scale : Number of Access Contracts
@@ -248,5 +295,4 @@ Run it to find out.  Here is a sample of some of the checks that are run
 #16:Checking:Scale : Number of Fabric Devices per Site
 #17:Checking:Scale : Number of Fabric Borders per Site
 #18:Checking:Scale : Number of Fabric Control Plane Nodes per Site
-
 ```
