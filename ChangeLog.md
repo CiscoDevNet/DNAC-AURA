@@ -1,4 +1,9 @@
 # Change Log
+- 1.3.3  (31 October 2020)
+     - retry disk IO failures
+     - Uncommented and Tweaked Service Distribution Check
+     - Fixed Scale checks for VN and Fabric Devices,Borders,CPs to handle Unicode Site Names
+
 - 1.3.2  (21 October 2020)
      -  timeout for cassandra health
      -  Compatibility & upgrade path checks updated with 1.3.3.8
