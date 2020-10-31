@@ -12,7 +12,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 ## Note about remote execution (session timeout)
-Later versions (2.1+, 1.3.3.8+) of Cisco DNA Center have an ssh idle timeout.  This can impact AURA being run from an ssh session
+Later versions (2.1+) of Cisco DNA Center have an ssh idle timeout.  This can impact AURA being run from an ssh session
 either directly on DNAC, or indirectly via the run_remote script or ansible.
 
 The work around is simple.  For an ssh connection, the "-o ServerAliveInterval=3" flag will send keepalives
