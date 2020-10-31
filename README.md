@@ -2,6 +2,11 @@
 
 The Cisco DNA Center AURA (Audit & Upgrade Readiness) command line tool performs a variety of health, scale & upgrade readiness checks for the DNA Center and the rest of the Fabric network. The tool is extremely simple to run and is executed on the DNA Center. The tool uses API calls, DB reads & show commands (read only operations) and hence, doesn't affect performance or cause impact to the DNA Center or the networking devices.
 
+## Note about remote execution (session timeout)
+Later versions (2.1+, 1.3.3.8+) of Cisco DNA Center have an ssh idle timeout. This can impact AURA being run from an ssh session either directly on DNAC, or indirectly via the run_remote script or ansible.
+
+The work around is simple. For an ssh connection, the "-o ServerAliveInterval=3" flag will send keepalives and maintain the session. This is used in this script, and can also be used for direct ssh connection as well as ansible
+
 ## To Download
 
 This script needs to be downloaded onto Cisco DNA Center.  First ssh to DNAC.
