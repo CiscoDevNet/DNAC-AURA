@@ -1,4 +1,14 @@
 # Change Log
+- 1.3.4  (09 November 2020)
+    - check for pending workflows
+    - Added new check for Transient Mounts
+    - Check for cluster hostname
+    - fix false success if DNS ping fails
+    - Change parent catalog var from warning to error
+    - added check for DNAC CA cert on Aireos
+    - Fixed incomplete model name for XL
+    - catch error in logtofile, logging for I/O check
+                                                       
 - 1.3.3  (31 October 2020)
      - retry disk IO failures
      - Uncommented and Tweaked Service Distribution Check
