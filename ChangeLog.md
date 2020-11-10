@@ -1,4 +1,9 @@
 # Change Log
+- 1.3.5  (10 November 2020)
+    - check VIP toggle -  CSCvo95706
+    - catch memberid error messaage and display
+    - Minor Tweak - Renamed Transient Mounts check
+    
 - 1.3.4  (09 November 2020)
     - check for pending workflows
     - Added new check for Transient Mounts
