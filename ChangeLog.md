@@ -1,6 +1,6 @@
 # Change Log
 - 1.3.6  (12 November 2020)
-    - break down of sitees by type, show empty building/floors
+    - break down of sites by type, show empty building/floors
     - check swap on 2.x builds, CSCvw31167
     - catch bad json in tennantid
     
