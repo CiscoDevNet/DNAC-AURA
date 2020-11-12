@@ -1,4 +1,9 @@
 # Change Log
+- 1.3.6  (12 November 2020)
+    - break down of sitees by type, show empty building/floors
+    - check swap on 2.x builds, CSCvw31167
+    - catch bad json in tennantid
+    
 - 1.3.5  (10 November 2020)
     - check VIP toggle -  CSCvo95706
     - catch memberid error messaage and display
