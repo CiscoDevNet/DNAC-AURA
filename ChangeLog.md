@@ -1,4 +1,10 @@
 # Change Log
+- 1.3.7  (15 November 2020)
+    - stale reachabilty DB - CSCvs68227
+    - Fixed fabric scale checks when multiple levels are present in a fabric site
+    - certificate update job failing - CSCvv55243
+    - logging for empty sites - only show first 15 in report
+    
 - 1.3.6  (12 November 2020)
     - break down of sites by type, show empty building/floors
     - check swap on 2.x builds, CSCvw31167
