@@ -1,4 +1,9 @@
 # Change Log
+- 1.3.8  (16 November 2020)
+    - avoid 1.2 for stale reachability test
+    - fix stale reachability error
+    - wlc kong error matching with assurnace
+    
 - 1.3.7  (15 November 2020)
     - stale reachabilty DB - CSCvs68227
     - Fixed fabric scale checks when multiple levels are present in a fabric site
