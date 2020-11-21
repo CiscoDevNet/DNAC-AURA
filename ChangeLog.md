@@ -1,4 +1,15 @@
 # Change Log
+- 1.3.9  (21 November 2020)
+    - CSCvu46056 CSCvs82235 and CSCvu46056 added to sidecar check
+    - eWLC -> IOSXE WLC in assurance checks
+    - tweak backup errors/info/warnings
+    - sidecar check
+    - Fixed reporting for VIP Toggle Check, Minor tweaks to Log Search funcs
+    - handle remedy log file appearing as binary
+    - utf-8 in site breakkdown
+    - remover duplicate swap message
+    - New Check for Gluster Volume Heal Stats , minor tweak to service distribution check
+    
 - 1.3.8  (16 November 2020)
     - avoid 1.2 for stale reachability test
     - fix stale reachability error
