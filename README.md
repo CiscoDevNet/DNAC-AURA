@@ -104,9 +104,10 @@ Report and Logs can be found at:
 ## Command Line Options
 ```
 ./DNAC-AURA/dnac_aura --help
-usage: dnac_aura [-h] [-v] [-V] [-s] [-u U] [-n N] [--syslog SYSLOG]
-                 [--admin-pass ADMIN_PASS] [--maglev-pass MAGLEV_PASS] [-o]
-                 [-c]
+usage: dnac_aura [-h] [-v] [-V] [--json-summary] [-s] [-u U] [-n N]
+                 [--syslog SYSLOG] [--admin-pass ADMIN_PASS]
+                 [--admin-user ADMIN_USER] [--maglev-pass MAGLEV_PASS] [-d]
+                 [-o] [-c]
 
 Select options.
 
@@ -114,6 +115,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -v                    verbose logging
   -V                    version information
+  --json-summary        print json-summary
   -s                    Run additional SDA checks. To execute these checks,
                         the tool will login to other devices in the fabric and
                         collect show command outputs.
@@ -124,17 +126,20 @@ optional arguments:
   --syslog SYSLOG       destination syslog server
   --admin-pass ADMIN_PASS
                         maglev admin password (this is the UI password for
-                        admin user
+                        admin user)
+  --admin-user ADMIN_USER
+                        maglev admin user (webUI user, default is admin)
   --maglev-pass MAGLEV_PASS
                         maglev password (for sudo)
-  -d                    Perform all DNA Center Infrastructure Health checks only
+  -d                    Perform all DNA Center Infrastructure Health checks
+                        only
   -o                    To collect CLI outputs from the network devices via
                         the Cisco DNA Center. Ensure you have the
                         captureFile.yaml in the same folder as this tool.
   -c                    Compare configurations across multiple devices. You
                         can choose 2 timestamps from previous captures taken
                         with the -o option. PDF Report will be generated with
-                        the diffs.     
+                        the diffs. 
  ```
 
 
