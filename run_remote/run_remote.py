@@ -106,7 +106,8 @@ def run_aura(dnac, maglev, admin_pass, admin_user, nopull, dir, rest):
             print("\nCloning/Pulling latest AURA Code...\n")
             stdin, stdout, stderr= conn.exec_command("https_proxy={} git clone https://github.com/CiscoDevNet/DNAC-AURA.git".format(proxy))
             validate_op(stdout, stderr)
-            stdin, stdout, stderr = conn.exec_command("cd DNAC-AURA; git pull")
+            #stdin, stdout, stderr = conn.exec_command("cd DNAC-AURA; git pull")
+            stdin, stdout, stderr = conn.exec_command("cd DNAC-AURA; https_proxy={} git pull".format(proxy))
             validate_op(stdout, stderr)
 
         json_summary = {}
