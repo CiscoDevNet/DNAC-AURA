@@ -1,4 +1,18 @@
 # Change Log
+- 1.4.0  (30 November 2020)
+   -  Fixed Query to sort correctly for top 10 largest tables in Postgres
+    - add proxy for pull
+    - skip swap check for L/XL
+    - Added reporting of top 10 largest tables data to postgres size check
+    - Add AURA result in json to the log file
+    - Tweaked maglev login to retry thrice and report partial AURA op collection if it fails
+    - add support for version 2.1.2.4 of DNAC
+    - Detailed SDA Checks for the Edges increased to 50 Edges per site with -s option
+    - move AURA self version check
+    - New check to validate Shell Env Vars for any proxy configs
+    - Added compatibility check to maglev backup display
+    - tweak backup history message
+
 - 1.3.9  (21 November 2020)
     - CSCvu46056 CSCvs82235 and CSCvu46056 added to sidecar check
     - eWLC -> IOSXE WLC in assurance checks
