@@ -2,7 +2,6 @@
 - 1.4.1  (09 December 2020)
     - Modified the welcome message
     - typo in remedyctl info
-    - Merge branch 'master' of https://wwwin-github.cisco.com/arcseeth/dnac_sda_audit_tool
     - add support for 1.3.3.9
     - Upgrade path check to 2.1.2.x patches
     - Fix Exception in Compatibility check with Cat2k device
