@@ -1,4 +1,15 @@
 # Change Log
+- 1.4.1  (09 December 2020)
+    - Modified the welcome message
+    - typo in remedyctl info
+    - Merge branch 'master' of https://wwwin-github.cisco.com/arcseeth/dnac_sda_audit_tool
+    - add support for 1.3.3.9
+    - Upgrade path check to 2.1.2.x patches
+    - Fix Exception in Compatibility check with Cat2k device
+    - Modify Compatibility and Upgrade path checks to include 1.3.3.9
+    - typeo update history message
+    - 3 DNS issue resolved in 1.3.3.8
+    
 - 1.4.0  (30 November 2020)
    -  Fixed Query to sort correctly for top 10 largest tables in Postgres
     - add proxy for pull
