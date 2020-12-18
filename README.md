@@ -40,7 +40,9 @@ scp -P 2222 ./DNAC-AURA/dnac_aura  maglev@<mydnac>:
 ### Option 4.  Transparent proxy
 If you try to clone and get the following messsage:
 ```
-git clone https://github.com/CiscoDevNet/DNAC-AURA Cloning into 'DNAC-AURA'... fatal: unable to access 'https://github.com/CiscoDevNet/DNAC-AURA/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+git clone https://github.com/CiscoDevNet/DNAC-AURA 
+Cloning into 'DNAC-AURA'... 
+fatal: unable to access 'https://github.com/CiscoDevNet/DNAC-AURA/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
 ```
 It is likely there is a transparent proxy in the way.  In order to work around this, you can save and trust the certificate the proxy is offering. Please only do this if you know your security team have a tansparent proxy.
 
