@@ -15,7 +15,7 @@ This script needs to be downloaded onto Cisco DNA Center.  First ssh to DNAC.
 ssh -p2222 maglev@<dnacIP>
 ```
 
-The next step is to get the script onto Cisco DNA Center.  There are three ways of doing this, depending on access from DNAC to the internet 
+The next step is to get the script onto Cisco DNA Center.  There are four ways of doing this, depending on access from DNAC to the internet 
 ### Option 1.  git clone direct
 If you have access to the internet from DNAC, can clone the repository (containing the executable)
 
@@ -36,6 +36,21 @@ You will need to clone (using method 1 or 2) to an intermediate machine and copy
 ```
 scp -P 2222 ./DNAC-AURA/dnac_aura  maglev@<mydnac>:
 ```
+
+### Option 4.  Transparent proxy
+If you try to clone and get the following messsage:
+```
+git clone https://github.com/CiscoDevNet/DNAC-AURA Cloning into 'DNAC-AURA'... fatal: unable to access 'https://github.com/CiscoDevNet/DNAC-AURA/': server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none
+```
+It is likely there is a transparent proxy in the way.  In order to work around this, you can save and trust the certificate the proxy is offering. Please only do this if you know your security team have a tansparent proxy.
+
+```
+echo -n | openssl s_client -showcerts -connect github.com:4432>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /home/maglev/git.pem
+
+git config --global http."https://github.com:443/".sslCAInfo/home/maglev/git.pem
+```
+you then should be able to use git clone as normal.
+
 ## To get the latest version
 We are adding new features quite often.  If you have downloaded an older version, it is very easy to get the latest.  Provided you used option #1 or #2, you can simply change directory into the DNAC-AURA directory and use git pull, instead of git clone.  You might need to provide proxy as in option #2.
 ```
