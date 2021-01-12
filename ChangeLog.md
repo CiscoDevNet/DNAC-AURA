@@ -1,4 +1,17 @@
 # Change Log
+- 1.4.2  (12 January 2021)
+    - Option to skip the SDA Device Check
+    - updated error message for log cleaner check
+    - Added New Check for Log Cleaner Cronjob if file exists(CSCvw89770) - Applicable to 2.1.2.x only
+    - fixed typo
+    - Skipping Diskspace validation for /mnt/install-artifacts
+    - check external auth flag
+    - added CSCvv37918 for MTU issue
+    - fix placeement of redis messages
+    - fixed incorrect info tag for assur_show_health check
+    - change CA cert expiry from warning to error <100days
+    - fix exception in retry of disk check
+    
 - 1.4.1  (09 December 2020)
     - Modified the welcome message
     - typo in remedyctl info
