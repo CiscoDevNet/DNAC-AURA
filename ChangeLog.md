@@ -1,4 +1,9 @@
 # Change Log
+- 1.4.3  (20 January 2021)
+    - Modified upgrade path check to include 2.1.2.5
+    - addded support for 2.1.2.5
+    - Fixed upgrade path checks
+    
 - 1.4.2  (12 January 2021)
     - Option to skip the SDA Device Check
     - updated error message for log cleaner check
