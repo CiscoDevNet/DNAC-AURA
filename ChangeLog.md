@@ -1,5 +1,5 @@
 # Change Log
-- 1.4.4  (01 Feburary 2021)
+- 1.4.4  (01 February 2021)
     - add both PRE POST hooks
     - added logging for LogCLeaner Cronjob check
     - dump out hook versions applied
