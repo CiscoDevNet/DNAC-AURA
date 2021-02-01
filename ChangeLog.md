@@ -1,4 +1,11 @@
 # Change Log
+- 1.4.4  (01 Feburary 2021)
+    - add both PRE POST hooks
+    - added logging for LogCLeaner Cronjob check
+    - dump out hook versions applied
+    - lisp component constraint violation - CSCvx10390
+    - add percentages to traffic errors
+    
 - 1.4.3  (20 January 2021)
     - Modified upgrade path check to include 2.1.2.5
     - addded support for 2.1.2.5
