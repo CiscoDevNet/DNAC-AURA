@@ -1,4 +1,11 @@
 # Change Log
+- 1.4.5  (19 February 2021)
+    - Fixed Catalog Settings Check check to handle None return for proxy
+    - updated package versions for 2.2.1
+    - Log cleaner exception fix
+    - tweaked error message for Influx OOM check
+    - Updated Influx OOM Check to include new validations for CSCvw50984
+    
 - 1.4.4  (01 February 2021)
     - add both PRE POST hooks
     - added logging for LogCLeaner Cronjob check
