@@ -1,4 +1,11 @@
 # Change Log
+- 1.4.6  (21 February 2021)
+    - Formatted Mongo Sizes Output to align values
+    - New Check for Mongo DB Sizes
+    - Removed "sizeOnly" from NDP DB size cmd in Mongo Collector check - Fails on Magneto
+    - Handled None Return for DNAC version on Influx check
+    - remove legacy 2.2.1.0 package description
+
 - 1.4.5  (19 February 2021)
     - Fixed Catalog Settings Check check to handle None return for proxy
     - updated package versions for 2.2.1
