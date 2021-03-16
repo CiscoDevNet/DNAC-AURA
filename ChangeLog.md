@@ -1,4 +1,13 @@
 # Change Log
+ - 1.4.7 (16th March 2021)
+    - Added new check for Zookeeper Epoch Validation on Cluster
+    - updated elasticsearch ndp check to also validate for ret code 6 - seen on 3 node setups
+    - fixed logic in elasticsearch checks for validation on XL appliances
+    - Added 2 new checks for ElasticSearch Cluster Status on maglev-system and ndp
+    - Added new checks(INFO only - No Validation) for Release Channel, System Update Packages, catalog package display and hook bundles
+    - add warning for non DN appliance
+    - fixed seconds in remedyctl start (total_seconds)
+    - 
 - 1.4.6  (21 February 2021)
     - Formatted Mongo Sizes Output to align values
     - New Check for Mongo DB Sizes
