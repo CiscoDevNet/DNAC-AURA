@@ -1,4 +1,15 @@
 # Change Log
+ - version 1.4.8 (8th April 2021)
+      - check for proxy encoding in Kernel 5.4.0-52-generic - CSCvx89597
+      - versions 2.1.2.6 and 2.2.1.3
+      - timeout for broken catalog commands
+      - Bundle mode device check
+      - ES NDP Check - Changed status for 44/56c for <1.3.x in 3x-node cluster to "Yellow"
+      - Fixed ES-NDP check to validate Node Count and Status as per table in TZ
+      - fix Checking MongoDB CPU join
+      - Bundle mode SWIM check
+      - updated upgrade path check for 2.1.2.6
+      
  - 1.4.7 (16th March 2021)
     - Added new check for Zookeeper Epoch Validation on Cluster
     - updated elasticsearch ndp check to also validate for ret code 6 - seen on 3 node setups
@@ -7,7 +18,7 @@
     - Added new checks(INFO only - No Validation) for Release Channel, System Update Packages, catalog package display and hook bundles
     - add warning for non DN appliance
     - fixed seconds in remedyctl start (total_seconds)
-    - 
+    
 - 1.4.6  (21 February 2021)
     - Formatted Mongo Sizes Output to align values
     - New Check for Mongo DB Sizes
