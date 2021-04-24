@@ -1,4 +1,13 @@
 # Change Log
+ - version 1.4.9 (24th April 2021)
+     - Handling wireless device command runner exception
+    - Summary of Errors Table
+    - timeout ffor system update package check
+    - tweak maglev login message
+    - fix timeout on release channel
+    - ES NDP Check - changed validation for 3 node to match unassigned with active shards
+    - Changed SDA comp matrix from 1.3.3.9 to 2.1.2.6
+    
  - version 1.4.8 (8th April 2021)
       - check for proxy encoding in Kernel 5.4.0-52-generic - CSCvx89597
       - versions 2.1.2.6 and 2.2.1.3
