@@ -1,4 +1,10 @@
 # Change Log
+ - version 1.5.0 (5th May 2021)
+     - convert dns connectdna query to dig
+    - Image Download test stand alone option (--download-test)
+    - Test Image Download check in Upgrade Readiness
+    - Minor Tweak to ES NDP check reporting
+
  - version 1.4.9 (24th April 2021)
      - Handling wireless device command runner exception
     - Summary of Errors Table
