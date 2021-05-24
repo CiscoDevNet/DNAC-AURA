@@ -1,4 +1,16 @@
 # Change Log
+ - version 1.5.1 (24th May 2021)
+     - version 2.2.2.x support
+    - Added check for Duplicate Group Based Policies in DNAC DB
+    - Display summarized list of APs
+    - Added note to SDA Detailed page to use -s option if there is a need to run all SDA checks
+    - Added validation for CSCvw20926 in Catalog Package check
+    - Added new check to validate GBAC Migration/Sync Status
+    - catch invalid json in catalog settings
+    - timeout for maglev backup
+    - timeout for Catalog hook bundles
+    - timeout for Catalog packages
+    
  - version 1.5.0 (5th May 2021)
      - convert dns connectdna query to dig
     - Image Download test stand alone option (--download-test)
