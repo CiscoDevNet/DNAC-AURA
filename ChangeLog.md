@@ -1,4 +1,7 @@
 # Change Log
+ - version 1.5.2 (27th May 2021)
+     -  Download test - Changed from tesseractcloud.com to ciscoconnectdna.com
+
  - version 1.5.1 (24th May 2021)
      - version 2.2.2.x support
     - Added check for Duplicate Group Based Policies in DNAC DB
