@@ -1,18 +1,4 @@
 # Change Log
- - version 1.5.3 (15th June 2021)
-     -support version 2.1.2.7
-    -fixed sg/pol count check to handle 0 return for non-sda setups
-    -SDA compatibility matrix check updated
-    -Support for Fabric sites with unicode characters
-    -Changed upgrade path check to reflect 2.1.2.7
-    -Only affected versions are checked for 'WLC correct telemetry API call' issue
-    -Fix LISP Table Size exception when Fabric dev on 16.6.x
-    -support for DNAC 2.2.2.3
-    -ignore node-operator-merics
-    -Added new check for Pleg Errors in Syslog, Included Taint check in Node status
-    -Added NFS stale file handle check
-    -Corrected the incorrect truncation of the check headline in summary of errors
-
  - version 1.5.2 (27th May 2021)
      -  Download test - Changed from tesseractcloud.com to ciscoconnectdna.com
 
