@@ -7,12 +7,12 @@
     - remove false endpoint error for gluster-fs in different namespace
     - added diff for .pki and docker filesystem for registry ca cert
     - tweak to reg ca check
-    - Registry CA cert expircy check - CSCvy55791
+    - Registry CA cert expiry check - CSCvy55791
     - fix log for packages in rca check
     - tweak Recent updates and RCA files
     - look for updates and rca
     - modify zookeeper from nc to zkServer.sh
-    - 
+    
  - version 1.5.3 (17th June 2021)
     - support version 2.1.2.7
     - fixed sg/pol count check to handle 0 return for non-sda setups
