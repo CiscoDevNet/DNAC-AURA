@@ -1,4 +1,18 @@
 # Change Log
+ - version 1.5.4 (22nd July 2021)
+     - Check status of secondary intfs for XL
+    - Fix crashes in sda_all_checks caused by cmd dumps that are None
+    - catch null fileid
+    - Updated GBAC Sync Check to ignore Access Contracts for the moment
+    - remove false endpoint error for gluster-fs in different namespace
+    - added diff for .pki and docker filesystem for registry ca cert
+    - tweak to reg ca check
+    - Registry CA cert expircy check - CSCvy55791
+    - fix log for packages in rca check
+    - tweak Recent updates and RCA files
+    - look for updates and rca
+    - modify zookeeper from nc to zkServer.sh
+    - 
  - version 1.5.3 (17th June 2021)
     - support version 2.1.2.7
     - fixed sg/pol count check to handle 0 return for non-sda setups
