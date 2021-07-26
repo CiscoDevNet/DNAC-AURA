@@ -1,4 +1,10 @@
 # Change Log
+ - version 1.5.5 (26th July 2021)
+     - estimate backup size
+    - fix null fileid
+    - Upgrade path to 2.2.2.3
+    - Minor Commit - Secondary intf check
+    
  - version 1.5.4 (22nd July 2021)
      - Check status of secondary intfs for XL
     - Fix crashes in sda_all_checks caused by cmd dumps that are None
