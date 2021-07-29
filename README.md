@@ -47,7 +47,7 @@ fatal: unable to access 'https://github.com/CiscoDevNet/DNAC-AURA/': server cert
 It is likely there is a transparent proxy in the way.  In order to work around this, you can save and trust the certificate the proxy is offering. Please only do this if you know your security team have a tansparent proxy.
 
 ```
-echo -n | openssl s_client -showcerts -connect github.com:4432>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /home/maglev/git.pem
+echo -n | openssl s_client -showcerts -connect github.com:443 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /home/maglev/git.pem
 
 git config --global http."https://github.com:443/".sslCAInfo/home/maglev/git.pem
 ```
