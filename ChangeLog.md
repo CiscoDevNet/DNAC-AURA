@@ -1,4 +1,19 @@
 # Change Log
+ - version 1.5.6 (27th August 2021)
+    - skipping non maglev-system glusterfs-server endpoints
+    - Moved Lisp component constraint violation & Stale reachability DB ent…
+    - Fixed exception in overlapping IP upgrade check
+    - check presence of docker Registry CA cert
+    - Modified Bundle mode check as SWIM stopped from 2.2.2.x onwards
+    - Moved Lisp component constraint violation & Stale reachability DB entries to SDA section
+    - Skipping NDP purge check if 2.2.3.x upwards as not applicable
+    - Fixed exception in Count of Scalable Groups check
+    - SDA-Compatibility Matrix Check updated to 2.2.2.x release
+    - Frey support - replacing ipcalc with ipaddress
+    - update tenantid check to use real admin user
+    - added versionss 2.2.2.4 2.2.3.0
+    - backout ur_check_backup_size
+    
  - version 1.5.5 (26th July 2021)
      - estimate backup size
     - fix null fileid
