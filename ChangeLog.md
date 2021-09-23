@@ -1,5 +1,5 @@
 # Change Log
- - version 1.5.7 (23rd Septembe 2021)
+ - version 1.5.7 (23rd September 2021)
      - Skipping CSCvu77846 for fixed versions
     - Minor change to ISE error msg
     - upgrade path updated with 2.2.2.4
