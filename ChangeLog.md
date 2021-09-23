@@ -1,4 +1,17 @@
 # Change Log
+ - version 1.5.7 (23rd Septembe 2021)
+     - Skipping CSCvu77846 for fixed versions
+    - Minor change to ISE error msg
+    - upgrade path updated with 2.2.2.4
+    - Cleanup code to avoid exceptions when DNAC version is not determined
+    - fix logic n secondary interface check
+    - catch EndpointConnectionError in BAPI check
+    - Exiting relevant checks when model is not determined
+    - make zookeepeer ruok more robust
+    - check for empty model - CSCvy96229
+    - skip localhost for versions 2.x - CSCvs24346
+    - check for etcd certs - CSCvw23564
+    - 
  - version 1.5.6 (27th August 2021)
     - skipping non maglev-system glusterfs-server endpoints
     - Moved Lisp component constraint violation & Stale reachability DB ent…
