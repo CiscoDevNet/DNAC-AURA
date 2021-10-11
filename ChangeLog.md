@@ -1,4 +1,16 @@
 # Change Log
+ - version 1.5.8 (12th October 2021)
+     - ignore CSCvy55791 for versions before 2.1.2
+    - Enhanced upgrade path check with version 2.2.2.5
+    - support for 2.2.3.3
+    - support for 2.2.2.5
+    - catch ResourceNotFoundError in device health
+    - add cron avc-te-job check for 2.3.2
+    - skip ETCD for unknown as well as 2.x
+    - catch connectionerror in devicehealth - 2.3.2
+    - fix curl -s for 2.3.2 in rabbitmq cluster status
+    - fix Mongo DB size check on 2.3.2
+    
  - version 1.5.7 (23rd September 2021)
      - Skipping CSCvu77846 for fixed versions
     - Minor change to ISE error msg
