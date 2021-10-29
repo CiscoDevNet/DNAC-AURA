@@ -1,4 +1,12 @@
 # Change Log
+ - version 1.5.9 (29th October 2021)
+    - check for extra serivces in the default namespace
+    - Updated error messages for Check_Config when execution fails
+    - updated error message for Transient Mounts Check
+    - support version 2.2.2.6
+    - Modified the description of the bundle mode check
+    - Added 2.2.2.6 to upgrade path and 17.6.* to comp matrix
+    
  - version 1.5.8 (12th October 2021)
      - ignore CSCvy55791 for versions before 2.1.2
     - Enhanced upgrade path check with version 2.2.2.5
