@@ -1,4 +1,11 @@
 # Change Log
+ - version 1.6.0 (8th December 2021)
+    - Fix exception in SDA ISE check when postgres is not responsive
+    - Additional DNAC version checks for s/w bugs
+    - catch exception when rca dir empty
+    - Version checking for checks related to bugs
+    - Changed CSCvv05807 to CSCvs35184
+
  - version 1.5.9 (29th October 2021)
     - check for extra serivces in the default namespace
     - Updated error messages for Check_Config when execution fails
