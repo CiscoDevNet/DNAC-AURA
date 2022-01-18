@@ -1,4 +1,10 @@
 # Change Log
+ - version 1.6.1 (18th January 2022)
+    - Tweaked SearchLog for journalctl logs, Added additional log validation in ssl_intercept check
+    - added support for 2.1.2.8, 2.2.3.4, 2.3.2.0, 2.2.2.8
+    - move cluster overlap check to main tests
+
+
  - version 1.6.0 (8th December 2021)
     - Fix exception in SDA ISE check when postgres is not responsive
     - Additional DNAC version checks for s/w bugs
