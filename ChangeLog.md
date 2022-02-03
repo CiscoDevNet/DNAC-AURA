@@ -1,5 +1,6 @@
 # Change Log
  - version 1.6.2 (3rd February 2022)
+     - skip down for taskmgr-assurance-4
      - skip down for taskmgr-assurance-3
     - Minor fix - Subnet  Overlap check
     - Log4j vulnerability check
