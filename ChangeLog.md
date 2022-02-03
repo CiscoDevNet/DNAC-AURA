@@ -1,4 +1,13 @@
 # Change Log
+ - version 1.6.2 (3rd February 2022)
+     - skip down for taskmgr-assurance-3
+    - Minor fix - Subnet  Overlap check
+    - Log4j vulnerability check
+    - catch exact proxyerror in commandrunner when multiple instances running
+    - updated Diskspace validations
+    - fixed for multiple redis instances in OOM check
+    - check for a file in /data/tmp that prevents dnac_aura dir being created
+    
  - version 1.6.1 (18th January 2022)
     - Tweaked SearchLog for journalctl logs, Added additional log validation in ssl_intercept check
     - added support for 2.1.2.8, 2.2.3.4, 2.3.2.0, 2.2.2.8
