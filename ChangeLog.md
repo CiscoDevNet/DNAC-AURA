@@ -1,4 +1,13 @@
 # Change Log
+ - version 1.6.3 (8th March 2022)
+     - adding support for 2.3.2.1
+    - 2min timeout for nodescale status
+    - added  CSCvs83964 for redis OOM
+    - new error message naming scheme
+    - Modified Secondary Interface Status check, CSCvz07674 is not applicable to 2.2.2.x & beyond
+    - Added New Check for Standard Interface Mapping
+    - updated docker path for registry CA Expiry check as per CSCvy55791
+    
  - version 1.6.2 (3rd February 2022)
      - skip down for taskmgr-assurance-4
      - skip down for taskmgr-assurance-3
