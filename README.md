@@ -36,7 +36,7 @@ You will need to clone (using method 1 or 2) to an intermediate machine and copy
 ```
 scp -P 2222 ./DNAC-AURA/dnac_aura  maglev@<mydnac>:
 ```
-Make sure the dnac_aura file is executable.  (It only needs to be execuable by the owner, which should be "maglev" user
+Make sure the dnac_aura file is executable.  (It only needs to be execuable by the owner, which should be "maglev" user. You need to do this on the target DNAC and in the directory that you copied dnac_aura.
 
 ```
 chmod 700 dnac_aura
