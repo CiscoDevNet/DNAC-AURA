@@ -1,4 +1,15 @@
 # Change Log
+ - version 1.6.4 (26th April 2022)
+    -  support version 2.2.3.5
+    -  Updated Scale limits for 2.2.3.x
+    -  check for ntp config before testing ntp servers
+    -  Fixing error on ZK Epoch check
+    -  catch ISE setup error
+    -  fake test for sda setup issue to appear
+    -  catch exceptions setting up sda tests and skip them
+    -  Network assurance check, allow Enabled and True
+    -  updated spec for hidden imports
+    
  - version 1.6.3 (8th March 2022)
      - adding support for 2.3.2.1
     - 2min timeout for nodescale status
