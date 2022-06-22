@@ -1,4 +1,13 @@
 # Change Log
+ - version 1.6.5 (22nd June 2022)
+    - change etcd location of ntp server in 2.3.3.x
+    - change etcd location of ntp server in 2.3.3.x
+    - support for versions 2.3.2.3, 2.2.2.9, 2.3.3.1
+    - check kubelet root ca cert
+    - ping_address retry limit reduced from default of 20
+    - check kubelet cert expiry
+    - suport for version 2.3.3.0
+
  - version 1.6.4 (26th April 2022)
     -  support version 2.2.3.5
     -  Updated Scale limits for 2.2.3.x
