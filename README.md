@@ -20,7 +20,7 @@ The next step is to get the script onto Cisco DNA Center.  There are four ways o
 If you have access to the internet from DNAC, can clone the repository (containing the executable)
 
 ```
-git clone https://github.com/CiscoDevNet/DNAC-AURA.git
+git clone --depth=1 https://github.com/CiscoDevNet/DNAC-AURA.git
 ```
 ### Option 2. git clone via proxy
 If DNAC needs a proxy to get to the internet, you will need to provide a proxy for git command.
@@ -28,7 +28,7 @@ NOTE:  please do not set a permanent environment variable as this will stop you 
 
 The example below uses an inline environment variable, just for the git command.  Make sure to put in the correct proxy url (including port) 
 ```
-https_proxy=https://<your proxy> git clone https://github.com/CiscoDevNet/DNAC-AURA.git
+https_proxy=https://<your proxy> git clone --depth=1 https://github.com/CiscoDevNet/DNAC-AURA.git
 ```
 
 ### Option 3. Isolated environment.  
@@ -54,7 +54,7 @@ It is likely there is a transparent proxy in the way.  In order to work around t
 ```
 echo -n | openssl s_client -showcerts -connect github.com:443 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /home/maglev/git.pem
 
-git config --global http."https://github.com:443/".sslCAInfo/home/maglev/git.pem
+git config --global http."https://github.com:443/".sslCAInfo /home/maglev/git.pem
 ```
 you then should be able to use git clone as normal.
 
@@ -65,11 +65,11 @@ $ cd ./DNAC-AURA
 $ git pull
 ```
 
-##AURA Versions - Change Log
+## AURA Versions - Change Log
 For release updates, see ChangeLog.md
 
 https://github.com/CiscoDevNet/DNAC-AURA/blob/master/ChangeLog.md
- 
+
 
 
 ## To Run
