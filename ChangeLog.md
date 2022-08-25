@@ -1,5 +1,13 @@
 # Change Log
- - version 1.6.5 (22nd June 2022)
+- version 1.6.6 (25th August 2022)
+    - cscwc59080 for 2.x releases and maglev hook installer bug
+    - checking for etcd cert_expiry_notify key - CSCwc56327
+    - check for default admin password
+    - get dnac version natively before looking at package cache.  due to 2.3.3.3/4 same packages
+    - support for version 2.3.3.4
+    - support for version  2.2.3.6
+    
+- version 1.6.5 (22nd June 2022)
     - change etcd location of ntp server in 2.3.3.x
     - change etcd location of ntp server in 2.3.3.x
     - support for versions 2.3.2.3, 2.2.2.9, 2.3.3.1
