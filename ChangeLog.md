@@ -1,4 +1,8 @@
 # Change Log
+- version 1.6.7 (17th September 2022)
+    -  check for ISO build for DR
+    - robustness in new version recognition.  Fix empty version corner case
+
 - version 1.6.6 (25th August 2022)
     - cscwc59080 for 2.x releases and maglev hook installer bug
     - checking for etcd cert_expiry_notify key - CSCwc56327
