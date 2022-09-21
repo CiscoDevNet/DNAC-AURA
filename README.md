@@ -10,6 +10,8 @@ The work around is simple. For an ssh connection, the "-o ServerAliveInterval=3"
 ##  Note about restricted shell
 Later versions (2.3.3.x+) have a restricted shell as a default. This prevents commands like "git" from being run.  In order to address this you need to either disable the restricted shell (only version 2.3.3.x) or get a restricted shell token from TAC in versions 2.3.4+
 
+To disable the restricted shell in 2.3.3, please look at https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center/2-3-3/admin_guide/b_cisco_dna_center_admin_guide_2_3_3/b_cisco_dna_center_admin_guide_2_3_3_chapter_010.html#Cisco_Task_in_List_GUI.dita_54088469-d201-4ba4-8976-f1facaa0a139
+
 ## To Download
 
 This script needs to be downloaded onto Cisco DNA Center.  First ssh to DNAC.
