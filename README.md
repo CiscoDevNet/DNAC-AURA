@@ -7,6 +7,9 @@ Later versions (2.1+, 1.3.3.8+) of Cisco DNA Center have an ssh idle timeout. Th
 
 The work around is simple. For an ssh connection, the "-o ServerAliveInterval=3" flag will send keepalives and maintain the session. This is used in the run_remote script, and can also be used for direct ssh connection as well as ansible
 
+##  Note about restricted shell
+Later versions (2.3.3.x+) have a restricted shell as a default. This prevents commands like "git" from being run.  In order to address this you need to either disable the restricted shell (only version 2.3.3.x) or get a restricted shell token from TAC in versions 2.3.4+
+
 ## To Download
 
 This script needs to be downloaded onto Cisco DNA Center.  First ssh to DNAC.
