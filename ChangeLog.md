@@ -1,4 +1,18 @@
 # Change Log
+- version 1.6.8 (12th January 2023)
+    - fix mongo cpu utilization to account for multiple cpu and utilization > 100%
+    - Fixed 2 issues – DR check failing for some releases & Hooks check output in the report was blank.  Also, reachability checks will print the IPs pinged.
+    - Scale numbers updated for 2.3.3.x
+    - Upgrade Path & Fabric compatibility updated to 2.3.3.x release. Added check for bug CSCvy50820.
+    - support for versions  2.3.5.0, 2.3.4.0, 2.3.4.3
+    - OSCP rerevoation change id  CSCvz40210 ->CSCvz27866
+    - versions  2.3.3.6, 2.3.3.5
+    - New check for upgrade failure CSCwc14612
+    - Replace SSID Scale check with Fabric SSID Scale check
+    - OCSP revocation check for swim
+    - catch ProxyError in check_ise_connection
+    - sanitize postgres password in Postgres Cluster Status
+    - mulitple whitespace for /etc/fstab entries in check_disk_partition_mounts
 - version 1.6.7 (17th September 2022)
     -  check for ISO build for DR
     - robustness in new version recognition.  Fix empty version corner case
