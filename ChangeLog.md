@@ -1,4 +1,10 @@
 # Change Log
+- version 1.6.9 (19th April 2023)   
+   -  capture DR state
+    -  fixes for DR execution
+    -  Added validation for CSCwa89160,CSCwe91959
+    -  Look for postgres Primary vs Master in 2.3.4 and greater
+
 - version 1.6.8 (12th January 2023)
     - fix mongo cpu utilization to account for multiple cpu and utilization > 100%
     - Fixed 2 issues – DR check failing for some releases & Hooks check output in the report was blank.  Also, reachability checks will print the IPs pinged.
