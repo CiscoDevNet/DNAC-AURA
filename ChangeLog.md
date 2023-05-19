@@ -1,4 +1,11 @@
 # Change Log
+- version 1.7.0 (19th May 2023)
+   - Catalyst switch bundle mode errors changed to warnings
+   - Updated check for CSCvy50820
+   - Modified CSCvy55791 to include 2.1.2.8
+   - New check for cert bug - CSCwe71699
+   - Updated check for CSCvy50820
+  
 - version 1.6.9 (19th April 2023)   
    -  capture DR state
     -  fixes for DR execution
