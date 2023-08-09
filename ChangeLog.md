@@ -1,4 +1,11 @@
 # Change Log
+- version 1.7.1 (9th August 2023)
+    -  Check for CSCwf63148
+    -  Exceptions handled better in NFS stale file handle check
+    -  fix an error in Expiry of registry CA cert
+    -  More details for CSCvz27866 & CSCwc56327
+
+
 - version 1.7.0 (19th May 2023)
    - Catalyst switch bundle mode errors changed to warnings
    - Updated check for CSCvy50820
