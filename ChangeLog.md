@@ -1,4 +1,8 @@
 # Change Log
+- version 1.7.2 (27th August 2023)
+    - maglev release display reports false info for version 2.2.x - use cache
+    - Check for CSCwe15923 - ETCD certs check
+      
 - version 1.7.1 (9th August 2023)
     -  Check for CSCwf63148
     -  Exceptions handled better in NFS stale file handle check
