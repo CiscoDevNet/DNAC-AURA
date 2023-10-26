@@ -1,5 +1,12 @@
 # Change Log
-- version 1.7.2 (27th August 2023)
+- version 1.7.3 (26th October 2023)
+   - check the DR version from the build, not the running
+   - add 2.1.2.8 as patched for CSCvu77846
+   - new psql user - appuser
+   - Postgres check modified to check more lines of output
+   - fix issue in version checks for OCSP/CRL revocation checks
+     
+- version 1.7.2 (27th September 2023)
     - maglev release display reports false info for version 2.2.x - use cache
     - Check for CSCwe15923 - ETCD certs check
       
