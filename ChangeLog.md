@@ -1,4 +1,10 @@
 # Change Log
+- version 1.7.4 (30th April 202$)
+   - fix ur_check_maglev_certs, skip debug message from sudo maglev-config certs info
+   - API response for command runner changed.  non biased language BLOCKLIST vs BLACKLIST
+   - Increased lnfluxdb limit to 30G
+   - tweak remedyctl tweak in case log is empty
+   - 
 - version 1.7.3 (26th October 2023)
    - check the DR version from the build, not the running
    - add 2.1.2.8 as patched for CSCvu77846
