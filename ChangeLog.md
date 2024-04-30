@@ -1,5 +1,5 @@
 # Change Log
-- version 1.7.4 (30th April 202$)
+- version 1.7.4 (30th April 2024)
    - fix ur_check_maglev_certs, skip debug message from sudo maglev-config certs info
    - API response for command runner changed.  non biased language BLOCKLIST vs BLACKLIST
    - Increased lnfluxdb limit to 30G
